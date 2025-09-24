@@ -1,0 +1,32 @@
+section {
+  padding-left: calc((100% - 1440px) / 2);
+  padding-right: calc((100% - 1440px) / 2);
+  background-color: #89bcd9;
+}
+
+.header_box {
+    height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px 109px;
+    gap: 196px;
+    > .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      > img {
+        width: 52px;
+        height: 38px;
+      }
+      > .name {
+        color: #F8F5EC;
+        font-size: 14px;
+      }
+      > .job {
+        color: #262E34;
+        font-weight: 300;
+      }
+    }
+  }
