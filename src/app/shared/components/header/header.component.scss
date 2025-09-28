@@ -30,3 +30,32 @@ section {
       }
     }
   }
+
+nav{
+  width: 677px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: 500;
+  > a{
+    text-decoration: none;
+    color: #262E34;
+   &:hover {
+    color: #F8F5EC;
+   }}
+}
+
+.switch{
+  width: 92px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-weight: 400;
+  > span{
+    cursor: pointer;
+    transition: color 0.5s ease 0.1s;
+    &:hover{
+      color: #F8F5EC;
+    }
+  }
+}

@@ -1,1 +1,53 @@
-<p>landing-page works!</p>
+<section>
+  <div
+    class="portrait-container"
+    (mouseenter)="portraitHover = true"
+    (mouseleave)="portraitHover = false"
+  >
+    <img
+      class="portrait-bg default"
+      src="assets/img/portrait_bg.png"
+      [class.hidden]="portraitHover"
+    />
+    <img
+      class="portrait-bg hover-img"
+      src="assets/img/portrait_bg_hover.png"
+      [class.visible]="portraitHover"
+    />
+    <img class="portrait" src="assets/img/portrait.png" alt="" />
+  </div>
+  <div class="portrait-side">
+    <div class="logo-box">
+      <div
+        class="logo"
+        (mouseenter)="logoHover = true"
+        (mouseleave)="logoHover = false"
+      >
+        <img
+          class="logo-default"
+          src="assets/img/logo_default.png"
+          [class.hidden]="logoHover"
+        />
+        <img
+          class="logo-hover"
+          src="assets/img/logo_hover.png"
+          [class.visible]="logoHover"
+        />
+        <span class="fontAnta name">D.Hannemann</span>
+        <span class="job">developer</span>
+      </div>
+      <div class="social">
+        <a href=""><img src="assets/img/mail_top.png" alt="" /></a>
+        <a href=""><img src="assets/img/github_top.png" alt="" /></a>
+        <a href=""><img src="assets/img/linkedin_top.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="headline">
+      <h1 class="fontAnta">David Hannemann</h1>
+      <h3 class="fontJosefin">FRONTEND DEVELOPER</h3>
+    </div>
+    <div class="arrow">
+      <img src="assets/img/arrow_down.png" alt="" />
+    </div>
+  </div>
+</section>
