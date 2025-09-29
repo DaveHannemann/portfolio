@@ -1,4 +1,26 @@
 section{
     margin-top: 120px;
     background: #262e34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+    > h1{
+        font-size: 60px;
+        font-weight: 400;
+        color: #89bcd9;
+        padding-top: 124px;
+    }
+}
+
+.flexbox {
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.motivation{
+    width: 379px;
+    gap: 24px;
 }
