@@ -13,11 +13,11 @@ export class IntroductionComponent implements AfterViewInit {
 lines = [
   { 
     icon: 'assets/img/located_mix.png', 
-    text: 'I am located in Salzgitter...' 
+    text: 'I am located in Salzgitter ...' 
   },
   { 
     icon: 'assets/img/remote.png', 
-    text: 'I am open to work remote...' 
+    text: 'I am open to work remote ...' 
   }
 ];
 

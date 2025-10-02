@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 24px;
+  font-size: 30px;
+  color: #89bcd9;
+  font-weight: 500;
 }
 
 .icon {
@@ -21,33 +23,44 @@
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
-section{
-    margin-top: 120px;
-    background: #262e34;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 80px;
-    > h1{
-        font-size: 60px;
-        font-weight: 400;
-        color: #89bcd9;
-        padding-top: 124px;
-    }
+.highlight {
+  color: #ffcc66;
+  font-weight: bold;
+}
+
+section {
+  margin-top: 120px;
+  background: #262e34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #89bcd9;
+    padding-top: 124px;
+  }
 }
 
 .flexbox {
-    width: 860px;
-    display: flex;
-    justify-content: space-between;
+  width: 860px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.motivation{
-    width: 379px;
-    gap: 24px;
+.motivation {
+  width: 379px;
+  gap: 24px;
 }
