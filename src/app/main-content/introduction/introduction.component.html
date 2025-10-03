@@ -2,13 +2,10 @@
   <h1 class="fontAnta">Why me</h1>
   <div class="flexbox">
 <div class="writer-line">
-  <img
-    [src]="lines[currentIndex].icon"
-    class="icon"
-    [class.fade]="!showIcon"
-  />
-
-  <span class="fontJosefin" #typedElement></span>
+  <img [src]="lines[currentIndex].icon" class="icon" [class.fade]="!showIcon"/>
+  <span class="fontJosefin mr-8" #prefixEl></span>
+  <span class="fontJosefin highlight mr-8" #middleEl></span>
+  <span class="fontJosefin" #suffixEl></span>
 </div>
 
     <div class="motivation">

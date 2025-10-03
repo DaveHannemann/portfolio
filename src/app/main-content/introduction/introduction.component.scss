@@ -1,34 +1,21 @@
 .writer-line {
   display: flex;
   align-items: center;
-  gap: 8px;
   font-size: 30px;
-    color: #89bcd9;
+  color: #89bcd9;
   font-weight: 500;
+
+}
+
+.mr-8{
+  margin-right: 8px;
 }
 
 .icon {
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
-
+  margin-right: 8px;
   &.fade {
-    opacity: 0;
-  }
-}
-
-.cursor {
-  display: inline-block;
-  width: 1ch;
-  animation: blink 1s steps(2, start) infinite;
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
     opacity: 0;
   }
 }
@@ -47,6 +34,10 @@ section {
     color: #89bcd9;
     padding-top: 124px;
   }
+}
+
+.highlight {
+  color: #f8f5ec;
 }
 
 .flexbox {
