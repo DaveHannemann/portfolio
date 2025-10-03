@@ -4,7 +4,7 @@
   font-size: 30px;
   color: #89bcd9;
   font-weight: 500;
-
+cursor: default;
 }
 
 .mr-8{
@@ -33,6 +33,7 @@ section {
     font-weight: 400;
     color: #89bcd9;
     padding-top: 124px;
+    cursor: default;
   }
 }
 
@@ -44,9 +45,32 @@ section {
   width: 860px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .motivation {
+  display: flex;
+  flex-direction: column;
   width: 379px;
   gap: 24px;
+}
+
+.text-whyme{
+  font-size: 18px;
+  color: #f8f5ec;
+  line-height: 1.2;
+  font-weight: 400;
+  cursor: default;
+}
+
+.talk-box{
+  display: flex;
+  justify-content: flex-end;
+  > img{
+    cursor: pointer;
+    &:hover {
+      background-color: #F8F5EC1F;
+      border-radius: 25px;
+    }
+  }
 }

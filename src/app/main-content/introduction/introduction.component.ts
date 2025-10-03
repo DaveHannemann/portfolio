@@ -55,7 +55,6 @@ export class IntroductionComponent implements AfterViewInit {
 async typePart(el: HTMLElement, text: string) {
   return new Promise<void>((resolve) => {
 
-    // Vorherige Cursor-Spans entfernen
     const oldCursors = el.parentElement?.querySelectorAll('.typed-cursor');
     oldCursors?.forEach(c => c.remove());
 
@@ -85,7 +84,6 @@ async typePart(el: HTMLElement, text: string) {
 async deletePart(el: HTMLElement) {
   return new Promise<void>((resolve) => {
 
-    // Vorherige Cursor-Spans entfernen
     const oldCursors = el.parentElement?.querySelectorAll('.typed-cursor');
     oldCursors?.forEach(c => c.remove());
 

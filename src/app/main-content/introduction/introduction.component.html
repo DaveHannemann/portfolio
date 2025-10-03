@@ -1,19 +1,30 @@
 <section>
   <h1 class="fontAnta">Why me</h1>
   <div class="flexbox">
-<div class="writer-line">
-  <img [src]="lines[currentIndex].icon" class="icon" [class.fade]="!showIcon"/>
-  <span class="fontJosefin mr-8" #prefixEl></span>
-  <span class="fontJosefin highlight mr-8" #middleEl></span>
-  <span class="fontJosefin" #suffixEl></span>
-</div>
+    <div class="writer-line">
+      <img
+        [src]="lines[currentIndex].icon"
+        class="icon"
+        [class.fade]="!showIcon"
+      />
+      <span class="fontJosefin mr-8" #prefixEl></span>
+      <span class="fontJosefin highlight mr-8" #middleEl></span>
+      <span class="fontJosefin" #suffixEl></span>
+    </div>
 
     <div class="motivation">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet enim
-        repellat quas totam nulla similique ipsam ea ipsa laborum officiis sit
-        corporis in reiciendis animi rem quae magni, perspiciatis tempore?
+      <p class="fontJosefin text-whyme">
+        Ich habe meine Leidenschaft fürs Programmieren neu entdeckt, weil es
+        eine perfekte Mischung aus analytischem Denken, Kreativität und meinem
+        Motto „Trial and Error“ bietet.<br />
+        Jedes Projekt bringt neue Herausforderungen mit sich.<br />
+        Sei es das eigenständige Lösen hartnäckiger Probleme, das Ausprobieren
+        und Verbessern von Ansätzen, oder die Zusammenarbeit im Team, bei der
+        Ideen, Kritik und Feedback aufeinandertreffen.<br />
+        Genau diese Vielfalt macht das Programmieren für mich so spannend und
+        interessant.
       </p>
+      <div class="talk-box"><img src="assets/img/talk.png" alt=""></div>
     </div>
   </div>
 </section>
