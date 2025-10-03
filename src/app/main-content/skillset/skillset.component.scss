@@ -1,0 +1,104 @@
+section {
+  background: #262e34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #89bcd9;
+    padding-top: 124px;
+    cursor: default;
+  }
+}
+
+.flexbox {
+  width: 869px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 409px;
+  > img {
+    height: 100px;
+    object-fit: contain;
+  }
+}
+
+.learning-container {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  > .learning {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  > .learning.default.hidden {
+    opacity: 0;
+  }
+  > .learning.hover-img {
+    opacity: 0;
+    z-index: 2;
+    transform: rotate(345deg);
+    object-fit: contain;
+  }
+  > .learning.hover-img.visible {
+    opacity: 1;
+  }
+}
+
+.learning-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  flex-direction: column;
+  color: #f8f5ec;
+  gap: 10px;
+  > .learning-text {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.learning-skillset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  width: 324px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  > .icon-learn {
+    width: 32px;
+    height: 32px;
+  }
+  > .icon-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

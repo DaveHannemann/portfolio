@@ -1,1 +1,34 @@
-<p>skillset works!</p>
+<section>
+  <h1 class="fontAnta">My Skills</h1>
+  <div class="flexbox">
+    <div class="skillset">
+      <img *ngFor="let skill of skills" [src]="skill" alt="Skill" />
+    </div>
+    <div
+      class="learning-container"
+      (mouseenter)="learningHover = true"
+      (mouseleave)="learningHover = false"
+    >
+      <img
+        class="learning default"
+        src="assets/img/learning.png"
+        [class.hidden]="learningHover"
+      />
+      <img
+        class="learning hover-img"
+        src="assets/img/learning_hover.png"
+        [class.visible]="learningHover"
+      />
+      <div class="fontJosefin learning-box">
+        <span class="learning-text">I am currently learning</span>
+        <span class="learning-text">or consolidating</span>
+        <div class="learning-skillset">
+          <div class="icon-box" *ngFor="let item of learningSkills">
+            <img class="icon-learn" [src]="item.src" [alt]="item.label" />
+            <span class="icon-text">{{ item.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
