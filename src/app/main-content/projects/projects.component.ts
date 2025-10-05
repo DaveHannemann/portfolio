@@ -13,5 +13,8 @@ import { MenubarComponent } from './menubar/menubar.component';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-
+selectedProject: string = '';
+onProjectSelected(name: string) {
+  this.selectedProject = name;
+}
 }

@@ -1,13 +1,27 @@
-<section class="fontJosefin">
+<section class="fontJosefin" *ngIf="projectData[project]">
   <div class="tech">
     <h4>Technologies</h4>
-    <div>
-      <img class="icon" src="assets/img/angular_learn.png" alt="" />
+    <div class="icons">
+      <img
+        *ngFor="let img of projectData[project].images"
+        [src]="img"
+        alt=""
+      />
     </div>
   </div>
-  <div><img class="project-picture" src="assets/img/dabubble.jpg" alt="" /></div>
+  <div>
+    <img
+      class="project-picture"
+      [src]="projectData[project].projectPicture"
+      alt=""
+    />
+  </div>
   <div class="project-buttons">
-    <a class="live" href="">Live Test</a>
-    <a class="github" href="">GitHub</a>
+    <a class="live" [href]="projectData[project].links.live" target="_blank"
+      >Live Test</a
+    >
+    <a class="github" [href]="projectData[project].links.github" target="_blank"
+      >GitHub</a
+    >
   </div>
 </section>

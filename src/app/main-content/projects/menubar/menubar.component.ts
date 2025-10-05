@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menubar',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
+@Output() projectSelected = new EventEmitter<string>();
 
+selectProject(name: string) {
+  this.projectSelected.emit(name);
+}
 }

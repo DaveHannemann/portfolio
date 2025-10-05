@@ -1,12 +1,9 @@
-<div class="icon-box fontJosefin">
+<div class="icon-box fontJosefin" *ngIf="projectData[project]">
   <img class="list-icon" src="assets/img/list_marker.png" alt="" />
-  <div class="text-box">
+  <div class="text-box" >
       <h3>How I have organised my work process</h3>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia nam
-      omnis ex voluptas placeat eveniet nisi, saepe excepturi libero molestiae
-      quae? Modi excepturi provident quos maxime totam adipisci delectus
-      aspernatur.
+      {{ projectData[project].text }}
     </p>
   </div>
 </div>

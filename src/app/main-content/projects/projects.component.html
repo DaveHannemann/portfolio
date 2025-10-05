@@ -1,15 +1,15 @@
 <section>
   <h1 class="fontAnta">My Projects</h1>
   <div class="full">
-    <app-menubar></app-menubar>
+    <app-menubar (projectSelected)="onProjectSelected($event)"></app-menubar>
     <div class="flexbox-projects">
       <div class="left-side">
-        <app-about></app-about>
-        <app-organise></app-organise>
-        <app-experience></app-experience>
+        <app-about [project]="selectedProject"></app-about>
+        <app-organise [project]="selectedProject"></app-organise>
+        <app-experience [project]="selectedProject"></app-experience>
       </div>
       <div>
-        <app-display></app-display>
+        <app-display [project]="selectedProject"></app-display>
       </div>
     </div>
   </div>
