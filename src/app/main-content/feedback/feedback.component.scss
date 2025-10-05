@@ -1,0 +1,15 @@
+section {
+  background: #262e34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+  > h4 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #89bcd9;
+    padding-top: 124px;
+    cursor: default;
+  }
+}
