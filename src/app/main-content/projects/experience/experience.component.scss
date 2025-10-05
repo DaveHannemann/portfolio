@@ -1,0 +1,27 @@
+.icon-box {
+  display: flex;
+  gap: 24px;
+  width: 690px;
+  color: #f8f5ec;
+  > .list-icon {
+    width: 29px;
+    height: 26px;
+  }
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+    > h3 {
+      font-size: 28px;
+      font-weight: 400;
+    }
+    > span {
+      font-size: 18px;
+    }
+
+  > p{
+    font-size: 18px;
+  }
+}

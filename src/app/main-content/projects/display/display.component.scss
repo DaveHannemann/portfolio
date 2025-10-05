@@ -1,0 +1,51 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #f8f5ec;
+  }
+}
+.project-picture {
+  width: 453.47px;
+  height: 312px;
+  border-radius: 30px;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  > .live {
+    text-decoration: none;
+    background-color: #89bcd9;
+    color: #262e34;
+    border-radius: 30px;
+    padding: 15px 30px;
+    cursor: default;
+    &:hover {
+      background-color: #f8f5ec;
+    }
+  }
+  > .github {
+    text-decoration: none;
+    background-color: #262e34;
+    border: 2px solid #89bcd9;
+    color: #89bcd9;
+    border-radius: 30px;
+    padding: 13px 30px;
+    cursor: default;
+    &:hover {
+      background-color: #f8f5ec1f;
+    }
+  }
+}
