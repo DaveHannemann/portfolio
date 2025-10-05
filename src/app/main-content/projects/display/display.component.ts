@@ -12,7 +12,7 @@ export class DisplayComponent {
   @Input() project!: string;
 
   projectData: any = {
-    Bubble: {
+    'DA Bubble': {
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',
@@ -48,20 +48,20 @@ export class DisplayComponent {
         github: '',
       },
     },
-    Pokedex: {
+    'Pokédex': {
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
         'assets/img/css_learn.png',
         'assets/img/api_learn.png',
       ],
-      projectPicture: '',
+      projectPicture: 'assets/img/pokedex.png',
       links: {
         live: '',
         github: '',
       },
     },
-    Ongoing: {
+    'Ongoing Project': {
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',

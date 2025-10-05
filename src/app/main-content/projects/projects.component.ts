@@ -13,7 +13,9 @@ import { MenubarComponent } from './menubar/menubar.component';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-selectedProject: string = '';
+projects = ['DA Bubble', 'Sharkie', 'Join', 'Pokédex', 'Ongoing Project'];
+selectedProject = this.projects[0];
+
 onProjectSelected(name: string) {
   this.selectedProject = name;
 }

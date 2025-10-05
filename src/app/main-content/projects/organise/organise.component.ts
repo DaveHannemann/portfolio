@@ -12,7 +12,7 @@ export class OrganiseComponent {
   @Input() project!: string;
 
   projectData: any = {
-    Bubble: {
+    'DA Bubble': {
       text: 'This info will come after the project is finished.',
     },
     Sharkie: {
@@ -21,6 +21,6 @@ export class OrganiseComponent {
     Join: {
       text: 'We used a Kanban Board to organize our tasks. Each member was responsible for different parts of the project, but we helped each other if needed. We had weekly meetings to discuss our progress and problems and update our board.',
     },
-    Pokedex: { text: 'I made a list of what I want to display and how. Then I splitted it using a Kanban Board into different tasks to build the project step by step. Every function has its own purpose.' },
+    'Pokédex': { text: 'I made a list of what I want to display and how. Then I splitted it using a Kanban Board into different tasks to build the project step by step. Every function has its own purpose.' },
   };
 }

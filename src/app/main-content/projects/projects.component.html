@@ -1,7 +1,10 @@
 <section>
   <h1 class="fontAnta">My Projects</h1>
   <div class="full">
-    <app-menubar (projectSelected)="onProjectSelected($event)"></app-menubar>
+    <app-menubar
+      (projectSelected)="onProjectSelected($event)"
+      [activeProject]="selectedProject"
+    ></app-menubar>
     <div class="flexbox-projects">
       <div class="left-side">
         <app-about [project]="selectedProject"></app-about>

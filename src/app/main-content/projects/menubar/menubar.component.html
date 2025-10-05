@@ -1,7 +1,10 @@
-<div>
-  <span (click)="selectProject('Bubble')">1. DA Bubble</span>
-  <span (click)="selectProject('Sharkie')">2. Sharkie</span>
-  <span (click)="selectProject('Join')">3. Join</span>
-  <span (click)="selectProject('Pokedex')">4. Pokédex</span>
-  <span (click)="selectProject('Ongoing')">5. Ongoing Project</span>
-</div>
+<section>
+  <button
+    class="fontJosefin"
+    *ngFor="let project of projects; let i = index"
+    (click)="selectProject(project)"
+    [ngClass]="{ active: project === activeProject }"
+  >
+    <strong>{{ i + 1 }}.</strong> {{ project }}
+  </button>
+</section>
