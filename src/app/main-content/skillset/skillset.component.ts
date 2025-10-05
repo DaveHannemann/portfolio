@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skillset',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './skillset.component.html',
   styleUrl: './skillset.component.scss',
 })
-export class SkillsetComponent {
+export class SkillsetComponent implements OnInit {
   skills = [
     'assets/img/angular.png',
     'assets/img/typescript.png',
@@ -32,4 +32,13 @@ export class SkillsetComponent {
   ];
 
   learningHover = false;
+
+  skillColumns: string[][] = [];
+
+  ngOnInit() {
+    const size = 4;
+    for (let i = 0; i < this.skills.length; i += size) {
+      this.skillColumns.push(this.skills.slice(i, i + size));
+    }
+  }
 }

@@ -1,9 +1,11 @@
 <section>
   <h1 class="fontAnta">My Skills</h1>
   <div class="flexbox">
-    <div class="skillset">
-      <img *ngFor="let skill of skills" [src]="skill" alt="Skill" />
-    </div>
+<div class="skillset">
+  <div *ngFor="let column of skillColumns" class="skill-row">
+    <img *ngFor="let skill of column" [src]="skill" alt="Skill" />
+  </div>
+</div>
     <div
       class="learning-container"
       (mouseenter)="learningHover = true"
