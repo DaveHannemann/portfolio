@@ -1,0 +1,33 @@
+<section>
+  <div
+    class="feedback-container"
+    (mouseenter)="feedbackHover = true"
+    (mouseleave)="feedbackHover = false"
+  >
+    <img
+      class="feedback default"
+      src="assets/img/feedback.png"
+      [class.hidden]="feedbackHover"
+    />
+    <img
+      class="feedback hover-img"
+      src="assets/img/feedback_hover.png"
+      [class.visible]="feedbackHover"
+    />
+    <div class="fontJosefin feedback-box">
+      <div class="feedback-header">
+        <h4>Name</h4>
+        <span>Project <span class="project"> Join </span></span>
+      </div>
+      <div class="feedback-text">
+        <p>
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          tempora magnam illo neque non ipsam eius debitis provident nobis
+          temporibus, sed voluptate, quibusdam sunt distinctio facere enim
+          mollitia vero labore?"
+        </p>
+      </div>
+<a href="">Linked In Profile</a>
+    </div>
+  </div>
+</section>

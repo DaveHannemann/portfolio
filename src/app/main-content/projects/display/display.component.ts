@@ -67,7 +67,7 @@ export class DisplayComponent {
         'assets/img/typescript_learn.png',
         'assets/img/firebase_learn.png',
       ],
-      projectPicture: 'assets/img/soon.png',
+      projectPicture: 'assets/img/soon.jpg',
       links: {
         live: '',
         github: '',
