@@ -1,1 +1,89 @@
-<p>contactform works!</p>
+<div class="container fontJosefin">
+  <form>
+    <div class="contact-data">
+      <div class="contact-data-single">
+        <label for="name">Your name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder=""
+          required
+          [(ngModel)]="formData.name"
+          #nameInput="ngModel"
+        />
+        <img
+          *ngIf="nameInput.valid && nameInput.touched"
+          src="assets/img/done.png"
+          class="valid-icon"
+        />
+      </div>
+      <div class="contact-data-single">
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder=""
+          required
+          [(ngModel)]="formData.email"
+          #emailInput="ngModel"
+        />
+        <img
+          *ngIf="emailInput.valid && emailInput.touched"
+          src="assets/img/done.png"
+          class="valid-icon"
+        />
+      </div>
+    </div>
+
+    <div class="contact-message">
+      <label for="message">Your Message</label>
+      <textarea
+        class="fontJosefin"
+        id="message"
+        name="message"
+        placeholder=""
+        required
+        [(ngModel)]="formData.message"
+        #messageInput="ngModel"
+      ></textarea>
+      <img
+        *ngIf="messageInput.valid && messageInput.touched"
+        src="assets/img/done.png"
+        class="valid-icon"
+      />
+    </div>
+    <div class="privacy-policy">
+      <div
+        class="policy-box"
+        (mouseenter)="policyHover = true"
+        (mouseleave)="policyHover = false"
+        (click)="policyClicked = !policyClicked"
+      >
+        <img
+          class="policy-check default"
+          src="assets/img/check_default.png"
+          [class.hidden]="policyHover || policyClicked"
+        />
+        <img
+          class="policy-check hover-img"
+          src="assets/img/check_hover.png"
+          [class.visible]="policyHover && !policyClicked"
+        />
+        <img
+          class="policy-check ready"
+          src="assets/img/check_ready.png"
+          *ngIf="policyClicked"
+        />
+      </div>
+      <p>
+        I've read the <a href="">privacy policy</a> and agree to the processing
+        of my data as outlined.
+      </p>
+    </div>
+    <div class="submit-button">
+      <input type="submit" value="Send" [disabled]="" />
+    </div>
+  </form>
+</div>
