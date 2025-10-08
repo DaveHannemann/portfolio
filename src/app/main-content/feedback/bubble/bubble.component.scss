@@ -1,3 +1,10 @@
+section {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .feedback-container {
   position: relative;
   width: 400px;
@@ -44,36 +51,38 @@
     flex-direction: column;
     gap: 8px;
     > h4 {
-        font-size: 26px;
-        font-weight: 600;
-        color: #F8F5EC;
+      font-size: 26px;
+      font-weight: 600;
+      color: #f8f5ec;
     }
     > span {
-        font-size: 18px;
-        font-weight: 400;
-        color: #F8F5EC;
-        > .project {
-            color: #89BCD9;
-        }
+      font-size: 18px;
+      font-weight: 400;
+      color: #f8f5ec;
+      > .project {
+        color: #89bcd9;
+      }
     }
   }
 }
 
 .feedback-text {
-    width: 292px;
-    > p {
-        font-size: 18px;
-        color: #F8F5EC;
-        font-weight: 400;
-    }
+  width: 292px;
+  height: 121px;
+  > p {
+    font-size: 18px;
+    color: #f8f5ec;
+    font-weight: 400;
+  }
 }
 
 a {
-    color: #89BCD9;
-    font-size: 16px;
-    font-weight: 400;
-    z-index: 99;
-    &:hover {
-        cursor: pointer;
-    }
+  color: #89bcd9;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 99;
+  &:hover {
+    cursor: pointer;
+    color: #f8f5ec;
+  }
 }

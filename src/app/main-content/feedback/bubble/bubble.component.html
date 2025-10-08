@@ -1,33 +1,31 @@
 <section>
   <div
+    *ngFor="let feedback of feedbackData; let i = index"
     class="feedback-container"
-    (mouseenter)="feedbackHover = true"
-    (mouseleave)="feedbackHover = false"
+    (mouseenter)="hoverIndex = i"
+    (mouseleave)="hoverIndex = null"
   >
     <img
       class="feedback default"
       src="assets/img/feedback.png"
-      [class.hidden]="feedbackHover"
+      [class.hidden]="hoverIndex === i"
     />
     <img
       class="feedback hover-img"
       src="assets/img/feedback_hover.png"
-      [class.visible]="feedbackHover"
+      [class.visible]="hoverIndex === i"
     />
     <div class="fontJosefin feedback-box">
       <div class="feedback-header">
-        <h4>Name</h4>
-        <span>Project <span class="project"> Join </span></span>
+        <h4>{{ feedback.name }}</h4>
+        <span
+          >{{ feedback.class }} <span class="project"> {{ feedback.project }} </span></span
+        >
       </div>
       <div class="feedback-text">
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          tempora magnam illo neque non ipsam eius debitis provident nobis
-          temporibus, sed voluptate, quibusdam sunt distinctio facere enim
-          mollitia vero labore?"
-        </p>
+        <p>"{{ feedback.message }}"</p>
       </div>
-<a href="">Linked In Profile</a>
+      <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
     </div>
   </div>
 </section>
