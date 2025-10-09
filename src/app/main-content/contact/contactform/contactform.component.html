@@ -1,8 +1,7 @@
 <div class="container fontJosefin">
-  <form>
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="contact-data">
       <div class="contact-data-single">
-        <label for="name">Your name</label>
         <input
           type="text"
           id="name"
@@ -11,7 +10,15 @@
           required
           [(ngModel)]="formData.name"
           #nameInput="ngModel"
+          [ngClass]="{
+            'error-border': nameInput.invalid && nameInput.touched
+          }"
         />
+        @if (nameInput.invalid && nameInput.touched) {
+        <p class="error">Your name is required</p>
+        } @else {
+        <label for="name">Your name</label>
+        }
         <img
           *ngIf="nameInput.valid && nameInput.touched"
           src="assets/img/done.png"
@@ -19,7 +26,6 @@
         />
       </div>
       <div class="contact-data-single">
-        <label for="email">Your Email</label>
         <input
           type="email"
           id="email"
@@ -28,7 +34,16 @@
           required
           [(ngModel)]="formData.email"
           #emailInput="ngModel"
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          [ngClass]="{
+            'error-border': emailInput.invalid && emailInput.touched
+          }"
         />
+        @if (emailInput.invalid && emailInput.touched) {
+        <p class="error">Your Email is required</p>
+        } @else {
+        <label for="email">Your Email</label>
+        }
         <img
           *ngIf="emailInput.valid && emailInput.touched"
           src="assets/img/done.png"
@@ -38,7 +53,11 @@
     </div>
 
     <div class="contact-message">
+      @if (messageInput.invalid && messageInput.touched) {
+      <p class="error">Your Message is requred</p>
+      } @else {
       <label for="message">Your Message</label>
+      }
       <textarea
         class="fontJosefin"
         id="message"
@@ -47,6 +66,9 @@
         required
         [(ngModel)]="formData.message"
         #messageInput="ngModel"
+        [ngClass]="{
+          'error-border': messageInput.invalid && messageInput.touched
+        }"
       ></textarea>
       <img
         *ngIf="messageInput.valid && messageInput.touched"
