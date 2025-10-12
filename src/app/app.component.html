@@ -1,4 +1,5 @@
 <app-landing-page *ngIf="isMainPage"></app-landing-page>
-<app-header class="main-header"></app-header>
+<div #headerTrigger></div>
+<app-header class="main-header" [class.fixed]="headerFixed"></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

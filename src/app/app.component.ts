@@ -1,27 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { MainContentComponent } from "./main-content/main-content.component";
-import { FooterComponent } from "./shared/components/footer/footer.component";
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { LandingPageComponent } from "./main-content/landing-page/landing-page.component";
+import { LandingPageComponent } from './main-content/landing-page/landing-page.component';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, FooterComponent, HeaderComponent, LandingPageComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    FooterComponent,
+    HeaderComponent,
+    LandingPageComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'portfolio';
+  @ViewChild('headerTrigger') headerTrigger!: ElementRef;
 
+  headerFixed = false;
   isMainPage = false;
 
-  constructor(private router: Router){
+  title = 'portfolio';
+
+  constructor(private router: Router) {
     this.router.events.subscribe(() => {
       this.isMainPage = this.router.url === '/';
     });
+  }
+
+    ngAfterViewInit() {
+    const observer = new IntersectionObserver(([entry]) => {
+      this.headerFixed = !entry.isIntersecting;
+    }, { threshold: 0 });
+
+    observer.observe(this.headerTrigger.nativeElement);
   }
 }
