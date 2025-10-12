@@ -1,0 +1,100 @@
+section {
+  padding-left: calc((100% - 1440px) / 2);
+  padding-right: calc((100% - 1440px) / 2);
+  background-color: #89bcd9;
+  height: 214px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-box {
+  width: 1216px;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.legal-notice {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  > a {
+    text-decoration: none;
+    color: #262e34;
+    margin-right: 100px;
+    &:hover {
+      color: #f8f5ec;
+    }
+  }
+  > span {
+    color: #262e34;
+    cursor: default;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  > img {
+    width: 52px;
+    height: 38px;
+  }
+  > .name {
+    color: #f8f5ec;
+    font-size: 14px;
+  }
+  > .job {
+    color: #262e34;
+    font-weight: 300;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+   > a {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      opacity: 0;
+    }
+
+    &:hover img {
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  > a:nth-child(1)::after {
+    background-image: url("/assets/img/github_bot_hover.png");
+  }
+
+  > a:nth-child(2)::after {
+    background-image: url("/assets/img/mail_bot_hover.png");
+  }
+
+  > a:nth-child(3)::after {
+    background-image: url("/assets/img/linked_bot_hover.png");
+  }
+}

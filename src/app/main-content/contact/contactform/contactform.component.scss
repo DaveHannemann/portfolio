@@ -21,7 +21,7 @@ form {
     color: #89bcd9;
     padding-left: 27px;
   }
-    > .error {
+  > .error {
     font-size: 14px;
     color: #e44c36;
     padding-left: 27px;
@@ -44,7 +44,7 @@ form {
       padding-left: 24px;
       background-color: #262e34;
     }
-        &:invalid {
+    &:invalid {
       color: #fffdfd;
       padding-left: 24px;
       background-color: #262e34;
@@ -103,6 +103,7 @@ form {
   gap: 8px;
   > p {
     cursor: default;
+    font-size: 14px;
     > a {
       text-decoration: none;
       color: #89bcd9;
@@ -115,6 +116,9 @@ form {
 
 .policy-box {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   > .policy-check {
     display: block;
     position: relative;
@@ -180,8 +184,23 @@ form {
     background-color: #262e34;
     border: solid 1px #f8f5ec;
   }
+  > input.active {
+    color: #89bcd9;
+    border: solid 1px #89bcd9;
+    cursor: pointer;
+    opacity: 100%;
+  }
 }
 
 .error-border {
   border: solid 1px #e44c36 !important;
+}
+
+.policy-text-error {
+  color: #e44c36;
+  position: absolute;
+  margin-left: 32px;
+  font-size: 14px;
+  margin-top: 40px;
+  cursor: default;
 }

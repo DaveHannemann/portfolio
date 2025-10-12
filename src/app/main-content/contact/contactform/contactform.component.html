@@ -60,6 +60,7 @@
       }
       <textarea
         class="fontJosefin"
+        minlength="3"
         id="message"
         name="message"
         placeholder=""
@@ -81,31 +82,44 @@
         class="policy-box"
         (mouseenter)="policyHover = true"
         (mouseleave)="policyHover = false"
-        (click)="policyClicked = !policyClicked"
+        (click)="togglePolicy()"
       >
         <img
-          class="policy-check default"
+          *ngIf="!policyClicked && !policyHover && !policyTouched"
           src="assets/img/check_default.png"
-          [class.hidden]="policyHover || policyClicked"
+          class="policy-check"
         />
         <img
-          class="policy-check hover-img"
+          *ngIf="policyHover && !policyClicked && !policyTouched"
           src="assets/img/check_hover.png"
-          [class.visible]="policyHover && !policyClicked"
+          class="policy-check"
         />
         <img
-          class="policy-check ready"
-          src="assets/img/check_ready.png"
           *ngIf="policyClicked"
+          src="assets/img/check_ready.png"
+          class="policy-check"
+        />
+        <img
+          *ngIf="!policyClicked && policyTouched"
+          src="assets/img/check_error.png"
+          class="policy-check"
         />
       </div>
       <p>
         I've read the <a href="">privacy policy</a> and agree to the processing
         of my data as outlined.
       </p>
+      <p *ngIf="!policyClicked && policyTouched" class="policy-text-error">
+        Please accept the privacy policy.
+      </p>
     </div>
     <div class="submit-button">
-      <input type="submit" value="Send" [disabled]="" />
+      <input
+        type="submit"
+        value="Send"
+        [disabled]="!contactForm.valid || !policyClicked"
+        [class.active]="contactForm.valid && policyClicked"
+      />
     </div>
   </form>
 </div>
