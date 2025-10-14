@@ -1,5 +1,5 @@
 <section id="why-me">
-  <h1 class="fontAnta">Why me</h1>
+  <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   <div class="flexbox">
     <div class="writer-line">
       <img
@@ -13,16 +13,7 @@
     </div>
 
     <div class="motivation">
-      <p class="fontJosefin text-whyme">
-        Ich habe meine Leidenschaft fürs Programmieren neu entdeckt, weil es
-        eine perfekte Mischung aus analytischem Denken, Kreativität und meinem
-        Motto „Trial and Error“ bietet.<br />
-        Jedes Projekt bringt neue Herausforderungen mit sich.<br />
-        Sei es das eigenständige Lösen hartnäckiger Probleme, das Ausprobieren
-        und Verbessern von Ansätzen, oder die Zusammenarbeit im Team, bei der
-        Ideen, Kritik und Feedback aufeinandertreffen.<br />
-        Genau diese Vielfalt macht das Programmieren für mich so spannend und
-        interessant.
+      <p class="fontJosefin text-whyme" [innerHTML]="texts.passion[activeLang]">
       </p>
       <div class="talk-box"><img src="assets/img/talk.png" alt=""></div>
     </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LangService } from '../../../services/lang.service';
+import { Lang } from '../../../types/lang.type';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,35 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   activeSection: string = '';
-  activeLang: string = 'EN';
+
+  constructor(public langService: LangService) {}
+
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  switchLang(lang: Lang) {
+    this.langService.switchLang(lang);
+  }
+
+  texts = {
+    why: {
+      DE: 'Warum ich',
+      EN: 'Why me',
+    },
+    skill: {
+      DE: 'Fähigkeiten',
+      EN: 'Skills',
+    },
+    project: {
+      DE: 'Projekte',
+      EN: 'Projects',
+    },
+    contact: {
+      DE: 'Kontakt',
+      EN: 'Contact',
+    },
+  };
 
   scrollToSection(sectionId: string) {
     this.activeSection = sectionId;
@@ -46,9 +76,5 @@ export class HeaderComponent {
     };
 
     requestAnimationFrame(animate);
-  }
-
-  switchLang(lang: string) {
-    this.activeLang = lang;
   }
 }

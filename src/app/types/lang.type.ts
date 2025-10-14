@@ -1,0 +1,1 @@
+export type Lang = 'DE' | 'EN';
