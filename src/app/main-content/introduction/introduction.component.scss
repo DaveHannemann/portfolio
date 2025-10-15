@@ -4,10 +4,10 @@
   font-size: 30px;
   color: #89bcd9;
   font-weight: 500;
-cursor: default;
+  cursor: default;
 }
 
-.mr-8{
+.mr-8 {
   margin-right: 8px;
 }
 
@@ -55,7 +55,7 @@ section {
   gap: 24px;
 }
 
-.text-whyme{
+.text-whyme {
   font-size: 18px;
   color: #f8f5ec;
   line-height: 1.2;
@@ -63,18 +63,99 @@ section {
   cursor: default;
 }
 
-.talk-box{
+.talk-box {
   display: flex;
   justify-content: flex-end;
-  > button{
-    color: #89BCD9;
+  > button {
+    color: #89bcd9;
     cursor: pointer;
     padding: 13px 30px;
-    border: 1px solid #89BCD9;
+    border: 1px solid #89bcd9;
     background-color: #262e34;
     border-radius: 25px;
     &:hover {
-      background-color: #F8F5EC1F;
+      background-color: #f8f5ec1f;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .motivation {
+    width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 0px;
+    gap: 62px;
+    > h1 {
+      padding-top: 0px;
+    }
+  }
+
+  .motivation {
+    width: 650px;
+    text-align: center;
+  }
+
+  .talk-box {
+    display: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .motivation {
+    width: 500px;
+  }
+}
+
+@media (max-width: 530px) {
+  .motivation {
+    width: 400px;
+  }
+}
+
+@media (max-width: 490px) {
+  .writer-line {
+    font-size: 24px;
+  }
+
+  .icon {
+    height: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  section {
+    > h1 {
+      font-size: 32px;
+    }
+  }
+  .motivation {
+    width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .writer-line {
+    font-size: 20px;
+  }
+
+  .icon {
+    height: 42px;
+  }
+}
+
+@media (max-width: 350px) {
+  .motivation {
+    width: 280px;
   }
 }
