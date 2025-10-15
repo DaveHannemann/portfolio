@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import { CommonModule } from '@angular/common';
 import { LangService } from '../../services/lang.service';
 import { Lang } from '../../types/lang.type';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-introduction',
@@ -12,7 +13,10 @@ import { Lang } from '../../types/lang.type';
   styleUrl: './introduction.component.scss',
 })
 export class IntroductionComponent implements AfterViewInit {
-  constructor(public langService: LangService) {}
+  constructor(
+    public langService: LangService,
+    private scrollService: ScrollService
+  ) {}
 
   get activeLang(): Lang {
     return this.langService.activeLang;
@@ -30,13 +34,13 @@ export class IntroductionComponent implements AfterViewInit {
   lines = [
     {
       icon: 'assets/img/located_mix.png',
-      prefix: { DE: 'Ich bin ', EN: 'I am ' },
+      prefix: { DE: 'Ich komme ', EN: 'I am ' },
       middle: { DE: 'aus Salzgitter', EN: 'located in Salzgitter' },
       suffix: { DE: ' ...', EN: ' ...' },
     },
     {
       icon: 'assets/img/remote.png',
-      prefix: { DE: 'Ich kann ', EN: 'I am ' },
+      prefix: { DE: 'Ich könnte ', EN: 'I am ' },
       middle: { DE: 'remote arbeiten', EN: 'open to work remote' },
       suffix: { DE: ' ...', EN: ' ...' },
     },
@@ -120,5 +124,9 @@ export class IntroductionComponent implements AfterViewInit {
 
   wait(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  scrollTo(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
   }
 }

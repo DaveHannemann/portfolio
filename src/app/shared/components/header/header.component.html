@@ -1,28 +1,28 @@
 <section>
   <div class="fontJosefin header_box">
-    <div class="logo">
+    <div (click)="scrollTo('landing')" class="logo">
       <img src="/assets/img/logo_header.png" alt="" />
       <span class="fontAnta name">D.Hannemann</span>
       <span class="job">developer</span>
     </div>
     <nav>
       <a
-        (click)="scrollToSection('why-me')"
+        (click)="scrollTo('why-me')"
         [class.active]="activeSection === 'why-me'"
         >{{ texts.why[activeLang] }}</a
       >
       <a
-        (click)="scrollToSection('skills')"
+        (click)="scrollTo('skills')"
         [class.active]="activeSection === 'skills'"
         >{{ texts.skill[activeLang] }}</a
       >
       <a
-        (click)="scrollToSection('projects')"
+        (click)="scrollTo('projects')"
         [class.active]="activeSection === 'projects'"
         >{{ texts.project[activeLang] }}</a
       >
       <a
-        (click)="scrollToSection('contact')"
+        (click)="scrollTo('contact')"
         [class.active]="activeSection === 'contact'"
         >{{ texts.contact[activeLang] }}</a
       >

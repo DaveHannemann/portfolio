@@ -66,11 +66,15 @@ section {
 .talk-box{
   display: flex;
   justify-content: flex-end;
-  > img{
+  > button{
+    color: #89BCD9;
     cursor: pointer;
+    padding: 13px 30px;
+    border: 1px solid #89BCD9;
+    background-color: #262e34;
+    border-radius: 25px;
     &:hover {
       background-color: #F8F5EC1F;
-      border-radius: 25px;
     }
   }
 }
