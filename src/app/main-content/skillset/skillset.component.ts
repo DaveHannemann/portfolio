@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { LangService } from '../../services/lang.service';
+import { Lang } from '../../types/lang.type';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-skillset',
@@ -9,6 +12,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './skillset.component.scss',
 })
 export class SkillsetComponent implements OnInit {
+  constructor(
+    public langService: LangService,
+    private scrollService: ScrollService
+  ) {}
+
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  texts = {
+    headline: { DE: 'Meine Fähigkeiten', EN: 'My Skills' },
+    learning: {
+      DE: 'Ich lerne gerade',
+      EN: 'I am currently learning',
+    },
+    mobile: {
+      DE: 'Was ich gerade lerne',
+      EN: 'What I am currently learning',
+    },
+    button: { DE: 'Schreib mir', EN: 'Let’s talk' },
+  };
+
   skills = [
     'assets/img/angular.png',
     'assets/img/typescript.png',
@@ -20,6 +45,19 @@ export class SkillsetComponent implements OnInit {
     'assets/img/git.png',
     'assets/img/material_design.png',
     'assets/img/scrum.png',
+  ];
+
+  skillsMobile = [
+    'assets/img/angular_mobile.png',
+    'assets/img/typescript_mobile.png',
+    'assets/img/javascript_mobile.png',
+    'assets/img/html_mobile.png',
+    'assets/img/css_mobile.png',
+    'assets/img/api_mobile.png',
+    'assets/img/firebase_mobile.png',
+    'assets/img/git_mobile.png',
+    'assets/img/material_design_mobile.png',
+    'assets/img/scrum_mobile.png',
   ];
 
   learningSkills = [
@@ -34,11 +72,19 @@ export class SkillsetComponent implements OnInit {
   learningHover = false;
 
   skillColumns: string[][] = [];
+  skillLinesMobile: string[][] = [];
 
   ngOnInit() {
     const size = 4;
     for (let i = 0; i < this.skills.length; i += size) {
       this.skillColumns.push(this.skills.slice(i, i + size));
     }
+    for (let i = 0; i < this.skillsMobile.length; i += size) {
+      this.skillLinesMobile.push(this.skillsMobile.slice(i, i + size));
+    }
+  }
+
+  scrollTo(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
   }
 }

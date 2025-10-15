@@ -1,11 +1,11 @@
 <section id="skills">
-  <h1 class="fontAnta">My Skills</h1>
+  <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   <div class="flexbox">
-<div class="skillset">
-  <div *ngFor="let column of skillColumns" class="skill-row">
-    <img *ngFor="let skill of column" [src]="skill" alt="Skill" />
-  </div>
-</div>
+    <div class="skillset">
+      <div *ngFor="let column of skillColumns" class="skill-row">
+        <img *ngFor="let skill of column" [src]="skill" alt="Skill" />
+      </div>
+    </div>
     <div
       class="learning-container"
       (mouseenter)="learningHover = true"
@@ -22,8 +22,7 @@
         [class.visible]="learningHover"
       />
       <div class="fontJosefin learning-box">
-        <span class="learning-text">I am currently learning</span>
-        <span class="learning-text">or consolidating</span>
+        <span class="learning-text">{{ texts.learning[activeLang] }}</span>
         <div class="learning-skillset">
           <div class="icon-box" *ngFor="let item of learningSkills">
             <img class="icon-learn" [src]="item.src" [alt]="item.label" />
@@ -33,4 +32,32 @@
       </div>
     </div>
   </div>
+
+  <div class="flexbox-mobile">
+    <div class="skillset">
+      <div *ngFor="let line of skillLinesMobile" class="skill-line">
+        <img *ngFor="let skill of line" [src]="skill" alt="Skill" />
+      </div>
+    </div>
+    <h4 class="fontJosefin">{{ texts.mobile[activeLang] }}</h4>
+    <div class="learning-container">
+      <img
+        class="learning default"
+        src="assets/img/learning_bubble_mobile.png"
+      />
+      <div class="fontJosefin learning-box">
+        <span class="learning-text">{{ texts.learning[activeLang] }}</span>
+        <div class="learning-skillset">
+          <div class="icon-box" *ngFor="let item of learningSkills">
+            <img class="icon-learn" [src]="item.src" [alt]="item.label" />
+            <span class="icon-text">{{ item.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="scrollTo('contact')" class="mobile-talk fontJosefin">
+    {{ texts.button[activeLang] }}
+  </button>
 </section>

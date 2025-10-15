@@ -14,10 +14,18 @@ section {
   }
 }
 
+h4 {
+  display: none;
+}
+
 .flexbox {
   width: 869px;
   display: flex;
   justify-content: space-between;
+}
+
+.flexbox-mobile {
+  display: none;
 }
 
 .skillset {
@@ -73,7 +81,7 @@ section {
   pointer-events: none;
   flex-direction: column;
   color: #f8f5ec;
-  gap: 10px;
+  gap: 32px;
   > .learning-text {
     font-size: 18px;
     font-weight: 400;
@@ -119,4 +127,118 @@ section {
   align-items: flex-start;
   justify-content: center;
   gap: 40px;
+}
+
+.mobile-talk {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .flexbox {
+    width: 810px;
+  }
+}
+
+@media (max-width: 840px) {
+  .flexbox {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h4 {
+    display: flex;
+    color: #89bcd9;
+    font-size: 24px;
+    cursor: default;
+  }
+
+  .flexbox-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .flexbox {
+    display: none;
+  }
+
+  .mobile-talk {
+    display: flex;
+    padding: 13px 30px;
+    color: #262e34;
+    border: none;
+    background-color: #89bcd9;
+    border-radius: 25px;
+    transition: background-color 0.4s ease-out;
+    &:active {
+      background-color: #f8f5ec;
+      transition: background-color 0s;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .learning-container {
+    > .learning {
+      transform: rotate(290deg);
+    }
+  }
+
+  .learning-box {
+    > .learning-text {
+      display: none;
+    }
+  }
+
+  .skillset {
+    flex-direction: column;
+    width: 298px;
+    gap: 32px;
+    > img {
+      height: 100px;
+      object-fit: contain;
+    }
+  }
+
+  .skill-line {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  section {
+    > h1 {
+      font-size: 32px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  .learning-container {
+    width: 290px;
+    height: 290px;
+  }
+
+  .learning-skillset {
+    width: 280px;
+  }
+
+  .skillset {
+    gap: 24px;
+  }
+
+  .skill-line {
+    gap: 28px;
+  }
+
+  section{
+    gap: 32px;
+  }
 }
