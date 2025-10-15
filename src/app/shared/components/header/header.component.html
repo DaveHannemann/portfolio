@@ -1,10 +1,46 @@
-<section>
+<section class="desktop">
   <div class="fontJosefin header_box">
     <div (click)="scrollTo('landing')" class="logo">
       <img src="/assets/img/logo_header.png" alt="" />
       <span class="fontAnta name">D.Hannemann</span>
       <span class="job">developer</span>
     </div>
+    <nav>
+      <a
+        (click)="scrollTo('why-me')"
+        [class.active]="activeSection === 'why-me'"
+        >{{ texts.why[activeLang] }}</a
+      >
+      <a
+        (click)="scrollTo('skills')"
+        [class.active]="activeSection === 'skills'"
+        >{{ texts.skill[activeLang] }}</a
+      >
+      <a
+        (click)="scrollTo('projects')"
+        [class.active]="activeSection === 'projects'"
+        >{{ texts.project[activeLang] }}</a
+      >
+      <a
+        (click)="scrollTo('contact')"
+        [class.active]="activeSection === 'contact'"
+        >{{ texts.contact[activeLang] }}</a
+      >
+    </nav>
+    <div class="switch">
+      <span (click)="switchLang('DE')" [class.active]="activeLang === 'DE'"
+        >DE</span
+      >
+      <span (click)="switchLang('EN')" [class.active]="activeLang === 'EN'"
+        >EN</span
+      >
+    </div>
+  </div>
+</section>
+
+<section class="mobile">
+  <img src="/assets/img/overlay.png" alt="" />
+  <div class="burger-box fontJosefin">
     <nav>
       <a
         (click)="scrollTo('why-me')"

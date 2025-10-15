@@ -1,7 +1,7 @@
-.main-header{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+.main-header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .main-header.fixed {
@@ -11,3 +11,18 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+  .main-header {
+    position: absolute;
+    top: 178px;
+    width: 100%;
+    bottom: auto;
+  }
+
+  .main-header.fixed {
+    position: absolute;
+    top: 178px;
+    bottom: auto;
+    z-index: 1000;
+  }
+}

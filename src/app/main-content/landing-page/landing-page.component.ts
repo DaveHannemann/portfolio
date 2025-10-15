@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -8,7 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {
-portraitHover = false;
-logoHover = false;
-socialHover = false;
+  portraitHover = false;
+  logoHover = false;
+  socialHover = false;
+  burgerHover = false;
+
+  constructor(private scrollService: ScrollService) {}
+
+  scrollTo(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
+  }
 }
