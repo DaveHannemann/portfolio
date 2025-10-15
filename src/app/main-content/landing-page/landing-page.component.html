@@ -37,9 +37,13 @@
         <span class="job">developer</span>
       </div>
       <div class="social">
-        <a ><img src="assets/img/mail_top.png" alt="" /></a>
-        <a href="" target="_blank"><img src="assets/img/github_top.png" alt="" /></a>
-        <a href="" target="_blank"><img src="assets/img/linkedin_top.png" alt="" /></a>
+        <a><img src="assets/img/mail_top.png" alt="" /></a>
+        <a href="" target="_blank"
+          ><img src="assets/img/github_top.png" alt=""
+        /></a>
+        <a href="" target="_blank"
+          ><img src="assets/img/linkedin_top.png" alt=""
+        /></a>
       </div>
     </div>
     <div class="headline">
@@ -47,7 +51,11 @@
       <h3 class="fontJosefin">FRONTEND DEVELOPER</h3>
     </div>
     <div class="arrow">
-      <img (click)="scrollTo('why-me')" src="assets/img/arrow_down.png" alt="" />
+      <img
+        (click)="scrollTo('why-me')"
+        src="assets/img/arrow_down.png"
+        alt=""
+      />
     </div>
   </div>
 </section>
@@ -65,13 +73,29 @@
       (mouseleave)="burgerHover = false"
     >
       <img
+        *ngIf="!headerVisible"
         class="burger default"
         src="assets/img/burger_default.png"
         [class.hidden]="burgerHover"
       />
       <img
+        *ngIf="!headerVisible"
+        (click)="toggleHeader()"
         class="burger hover-img"
         src="assets/img/burger_hover.png"
+        [class.visible]="burgerHover"
+      />
+      <img
+        *ngIf="headerVisible"
+        class="burger default"
+        src="assets/img/burger_close.png"
+        [class.hidden]="burgerHover"
+      />
+      <img
+        *ngIf="headerVisible"
+        (click)="toggleHeader()"
+        class="burger hover-img"
+        src="assets/img/burger_close_hover.png"
         [class.visible]="burgerHover"
       />
     </div>

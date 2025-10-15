@@ -123,6 +123,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 524px;
     gap: 48px;
     nav {
@@ -141,6 +142,10 @@ nav {
           color: #f8f5ec;
           cursor: pointer;
         }
+        &.active::after {
+          content: "";
+          background-image: none;
+        }
 
         &.active {
           z-index: 4;
@@ -149,6 +154,41 @@ nav {
           cursor: default;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 555px) {
+  .mobile {
+    > img {
+      width: 435px;
+    }
+  }
+
+  .burger-box {
+    height: 460px;
+    gap: 32px;
+    nav {
+      font-weight: 500;
+      gap: 48px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .mobile {
+    > img {
+      width: 300px;
+    }
+  }
+
+  .burger-box {
+    height: 340px;
+    gap: 24px;
+    nav {
+      font-weight: 500;
+      gap: 32px;
+      font-size: 20px;
     }
   }
 }

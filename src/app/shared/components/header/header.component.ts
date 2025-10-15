@@ -1,25 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 import { ScrollService } from '../../../services/scroll.service';
+import { UiService } from '../../../services/user-interface.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  headerVisible = false;
   activeSection: string = '';
 
   constructor(
     public langService: LangService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private ui: UiService
   ) {
     this.scrollService.activeSection$.subscribe(
       (section) => (this.activeSection = section)
     );
+  }
+
+  ngOnInit() {
+    this.ui.headerVisible$.subscribe((v) => (this.headerVisible = v));
   }
 
   get activeLang(): Lang {

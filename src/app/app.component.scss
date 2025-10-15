@@ -26,3 +26,13 @@
     z-index: 1000;
   }
 }
+
+@media (max-width: 460px) {
+  .main-header {
+    top: 92px;
+  }
+
+  .main-header.fixed {
+    top: 92px;
+  }
+}
