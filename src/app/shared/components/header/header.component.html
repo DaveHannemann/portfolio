@@ -44,22 +44,18 @@
     <nav>
       <a
         (click)="scrollTo('why-me')"
-        [class.active]="activeSection === 'why-me'"
         >{{ texts.why[activeLang] }}</a
       >
       <a
         (click)="scrollTo('skills')"
-        [class.active]="activeSection === 'skills'"
         >{{ texts.skill[activeLang] }}</a
       >
       <a
         (click)="scrollTo('projects')"
-        [class.active]="activeSection === 'projects'"
         >{{ texts.project[activeLang] }}</a
       >
       <a
         (click)="scrollTo('contact')"
-        [class.active]="activeSection === 'contact'"
         >{{ texts.contact[activeLang] }}</a
       >
     </nav>

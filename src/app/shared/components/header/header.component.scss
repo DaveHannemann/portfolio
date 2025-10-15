@@ -69,9 +69,8 @@ nav {
 }
 
 .switch {
-  width: 92px;
   display: flex;
-  justify-content: space-around;
+  gap: 12px;
   font-size: 18px;
   font-weight: 400;
   > span {
@@ -100,6 +99,34 @@ nav {
       color: #f8f5ec;
       cursor: default;
     }
+  }
+}
+
+@media (max-width: 1250px) {
+  .header_box {
+    padding: 16px 80px;
+    gap: 160px;
+  }
+}
+
+@media (max-width: 1124px) {
+  .header_box {
+    padding: 16px 60px;
+    gap: 120px;
+  }
+}
+
+@media (max-width: 945px) {
+  .header_box {
+    padding: 16px 50px;
+    gap: 100px;
+  }
+}
+
+@media (max-width: 860px) {
+  .header_box {
+    padding: 16px 30px;
+    gap: 70px;
   }
 }
 

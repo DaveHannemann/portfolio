@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 import { ScrollService } from '../../../services/scroll.service';
@@ -59,5 +59,35 @@ export class HeaderComponent implements OnInit {
 
   scrollTo(sectionId: string) {
     this.scrollService.scrollToSection(sectionId);
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const sections = ['landing', 'why-me', 'skills', 'projects', 'contact'];
+    let found = false;
+
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+
+      const rect = el.getBoundingClientRect();
+      const inView =
+        rect.top <= window.innerHeight * 0.4 &&
+        rect.bottom >= window.innerHeight * 0.4;
+
+      if (inView) {
+        this.activeSection = id;
+        found = true;
+        break;
+      }
+    }
+
+    if (
+      !found &&
+      window.innerHeight + window.scrollY >= document.body.scrollHeight - 10
+    ) {
+      this.activeSection = 'contact';
+      found = true;
+    }
   }
 }
