@@ -7,3 +7,24 @@
     </p>
   </div>
 </div>
+
+<div class="icon-box-mobile fontJosefin" *ngIf="projectData[project]">
+  <div class="headline-mobile">
+    <img class="list-icon" src="assets/img/list_marker.png" alt="" />
+    <h3>{{ projectData[project].title }}</h3>
+  </div>
+
+  <div class="text-box-mobile">
+    <p>
+      {{ projectData[project].text }}
+    </p>
+  </div>
+  <div class="project-buttons">
+    <a class="live" [href]="projectData[project].links.live" target="_blank"
+      >Live Test</a
+    >
+    <a class="github" [href]="projectData[project].links.github" target="_blank"
+      >GitHub</a
+    >
+  </div>
+</div>

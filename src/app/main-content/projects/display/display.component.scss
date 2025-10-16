@@ -10,6 +10,9 @@ section {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  > h2 {
+    display: none;
+  }
   > h4 {
     font-size: 18px;
     font-weight: 400;
@@ -19,6 +22,12 @@ section {
     display: flex;
     gap: 32px;
     height: 36px;
+  }
+  > .tech-names {
+    display: none;
+  }
+  > .duration {
+    display: none;
   }
 }
 
@@ -54,5 +63,85 @@ section {
     &:hover {
       background-color: #f8f5ec1f;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .project-picture {
+    width: 400px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-picture {
+    width: 350px;
+    height: 230px;
+  }
+}
+
+@media (max-width: 915px) {
+  .project-picture {
+    width: 310px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-buttons {
+    display: none;
+  }
+
+  .tech {
+    align-items: flex-start;
+    > h2 {
+      display: flex;
+      color: #89bcd9;
+      font-size: 32px;
+      font-weight: 400;
+    }
+    > h4 {
+      display: none;
+    }
+    > .icons {
+      display: none;
+    }
+    > .tech-names {
+      display: flex;
+      color: #f8f5ec;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    > .duration {
+      display: flex;
+      color: #f8f5ec;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  .picture-box {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+  }
+
+  .project-picture {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-picture {
+    width: 380px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-picture {
+    width: 270px;
+    height: 170px;
   }
 }

@@ -1,7 +1,11 @@
-section {
+.desktop {
   padding-left: 86px;
   display: flex;
   gap: 16px;
+}
+
+.mobile {
+  display: none;
 }
 
 button {
@@ -17,8 +21,78 @@ button {
   transition: all 0.2s ease;
 }
 
-button.active{
-    background: rgba(137, 188, 217, 0.0705882353);
-    color: #f8f5ec;
-    cursor: default;
+button.active {
+  background: rgba(137, 188, 217, 0.0705882353);
+  color: #f8f5ec;
+  cursor: default;
+}
+
+@media (max-width: 1200px) {
+  .desktop {
+    padding-left: 48px;
+    display: flex;
+    gap: 16px;
+  }
+
+  button {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .desktop {
+    padding-left: 32px;
+    display: flex;
+    gap: 12px;
+  }
+
+  button {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .line {
+    display: flex;
+  }
+}
+
+@media (max-width: 650px) {
+  .mobile {
+    flex-direction: column;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  .line {
+    display: flex;
+  }
+}
+
+@media (max-width: 460px) {
+  .mobile {
+    flex-direction: column;
+  }
+
+  .highlight{
+    border-radius: 25px;
+  }
+
+  button {
+    padding: 8px;
+  }
+
+  .line {
+    display: flex;
+  }
 }

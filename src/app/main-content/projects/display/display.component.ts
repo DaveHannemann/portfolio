@@ -13,6 +13,9 @@ export class DisplayComponent {
 
   projectData: any = {
     'DA Bubble': {
+      headline: 'DA Bubble',
+      technologie: 'Angular, TypeScript, Firebase',
+      duration: 'TBD',
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',
@@ -25,6 +28,9 @@ export class DisplayComponent {
       },
     },
     Sharkie: {
+      headline: 'Sharkie',
+      technologie: 'HTML, CSS, JavaScript',
+      duration: '5 weeks',
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -37,6 +43,9 @@ export class DisplayComponent {
       },
     },
     Join: {
+      headline: 'Join',
+      technologie: 'HTML, CSS, JavaScript',
+      duration: '2 months',
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -48,7 +57,10 @@ export class DisplayComponent {
         github: '',
       },
     },
-    'Pokédex': {
+    Pokédex: {
+      headline: 'Pokédex',
+      technologie: 'HTML, CSS, JavaScript, API',
+      duration: '2 weeks',
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -62,6 +74,8 @@ export class DisplayComponent {
       },
     },
     'Ongoing Project': {
+      headline: 'Ongoing Project',
+      technologie: 'Angular, TypeScript, Firebase',
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',

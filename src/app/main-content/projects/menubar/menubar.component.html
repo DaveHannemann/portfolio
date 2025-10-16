@@ -1,4 +1,4 @@
-<section>
+<section class="desktop">
   <button
     class="fontJosefin"
     *ngFor="let project of projects; let i = index"
@@ -7,4 +7,20 @@
   >
     <strong>{{ i + 1 }}.</strong> {{ project }}
   </button>
+</section>
+
+<section class="mobile">
+  <div class="line" *ngFor="let row of projectRows; let rowIndex = index">
+    <button
+      class="fontJosefin"
+      *ngFor="let project of row; let colIndex = index"
+      (click)="selectProject(project)"
+      [ngClass]="{
+        active: project === activeProject,
+        highlight: rowIndex * 4 + colIndex < 4
+      }"
+    >
+      <strong>{{ rowIndex * 4 + colIndex + 1 }}.</strong> Project
+    </button>
+  </div>
 </section>

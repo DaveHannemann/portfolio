@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { IntroductionComponent } from "./introduction/introduction.component";
 import { SkillsetComponent } from "./skillset/skillset.component";
 import { ProjectsComponent } from "./projects/projects.component";

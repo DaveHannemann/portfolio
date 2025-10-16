@@ -20,7 +20,6 @@ export class AboutComponent {
     Join: { duration: '2 Months', text: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ' },
     'Pokédex': { duration: '2 Weeks', text: 'API based app to display all pokemon stats, evo-chain, species etc.' },
     'Ongoing Project': {
-      duration: 'TBD',
       text: 'Next Project will be DA Bubble to finish my graduation @Developer Akademie',
     },
   };

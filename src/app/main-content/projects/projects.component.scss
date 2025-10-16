@@ -32,3 +32,13 @@ section {
 .full {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .flexbox-projects {
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: auto;
+  }
+}
