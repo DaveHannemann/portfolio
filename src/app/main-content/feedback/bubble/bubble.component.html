@@ -1,4 +1,4 @@
-<section>
+<section class="desktop">
   <div
     *ngFor="let feedback of feedbackData; let i = index"
     class="feedback-container"
@@ -14,6 +14,30 @@
       class="feedback hover-img"
       src="assets/img/feedback_hover.png"
       [class.visible]="hoverIndex === i"
+    />
+    <div class="fontJosefin feedback-box">
+      <div class="feedback-header">
+        <h4>{{ feedback.name }}</h4>
+        <span
+          >{{ feedback.class }} <span class="project"> {{ feedback.project }} </span></span
+        >
+      </div>
+      <div class="feedback-text">
+        <p>"{{ feedback.message }}"</p>
+      </div>
+      <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
+    </div>
+  </div>
+</section>
+
+<section class="mobile">
+  <div
+    *ngFor="let feedback of feedbackData; let i = index"
+    class="feedback-container"
+  >
+    <img
+      class="feedback default"
+      src="assets/img/feedback.png"
     />
     <div class="fontJosefin feedback-box">
       <div class="feedback-header">

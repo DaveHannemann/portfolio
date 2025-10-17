@@ -1,4 +1,4 @@
-section {
+.desktop {
   background: #262e34;
   display: flex;
   justify-content: center;
@@ -11,5 +11,49 @@ section {
     color: #89bcd9;
     padding-top: 124px;
     cursor: default;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .desktop {
+    > h4 {
+      padding-top: 124px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    background: #262e34;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 24px;
+    > .headline {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 32px;
+      gap: 12px;
+      > h4 {
+        color: #89bcd9;
+        font-size: 32px;
+        font-weight: 400;
+      }
+      > span {
+        color: #f8f5ec;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
   }
 }

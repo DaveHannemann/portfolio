@@ -1,8 +1,12 @@
-section {
+.desktop {
   gap: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mobile {
+  display: none;
 }
 
 .feedback-container {
@@ -85,4 +89,113 @@ a {
     cursor: pointer;
     color: #f8f5ec;
   }
+}
+
+@media (max-width: 1260px) {
+  .feedback-container {
+    width: 370px;
+    height: 370px;
+  }
+
+  .feedback-box {
+    left: 30px;
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .feedback-container {
+    width: 340px;
+    height: 340px;
+  }
+
+  .feedback-box {
+    top: 50px;
+    left: 25px;
+    width: 300px;
+    height: 250px;
+  }
+}
+@media (max-width: 1075px) {
+  .feedback-container {
+    width: 310px;
+    height: 310px;
+  }
+
+  .feedback-box {
+    width: 260px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 980px) {
+  .feedback-container {
+    width: 290px;
+    height: 290px;
+  }
+
+  .feedback-box {
+    width: 240px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 920px) {
+  .desktop {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+
+    .feedback-container {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .feedback-container {
+    > .feedback {
+      transform: rotate(215deg);
+    }
+  }
+
+  .feedback-box {
+    > .feedback-header {
+      > h4 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #f8f5ec;
+      }
+    }
+  }
+
+  .feedback-text {
+    width: 250px;
+    height: 124px;
+    > p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+}
+@media (max-width: 420px) {
+}
+@media (max-width: 420px) {
 }
