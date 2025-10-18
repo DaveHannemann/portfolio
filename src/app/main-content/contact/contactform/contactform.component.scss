@@ -204,3 +204,19 @@ form {
   margin-top: 40px;
   cursor: default;
 }
+
+@media (max-width: 940px) {
+  .contact-data-single {
+    width: auto;
+    flex: 1;
+  }
+  .contact-data {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 570px) {
+  .contact-data {
+    flex-direction: column;
+  }
+}
