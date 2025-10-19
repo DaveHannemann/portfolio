@@ -4,19 +4,37 @@ import { OrganiseComponent } from './organise/organise.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { DisplayComponent } from './display/display.component';
 import { MenubarComponent } from './menubar/menubar.component';
+import { LangService } from '../../services/lang.service';
+import { Lang } from '../../types/lang.type';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [AboutComponent, OrganiseComponent, ExperienceComponent, DisplayComponent, MenubarComponent],
+  imports: [
+    AboutComponent,
+    OrganiseComponent,
+    ExperienceComponent,
+    DisplayComponent,
+    MenubarComponent,
+  ],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-projects = ['DA Bubble', 'Sharkie', 'Join', 'Pokédex', 'Ongoing Project'];
-selectedProject = this.projects[0];
+  constructor(public langService: LangService) {}
 
-onProjectSelected(name: string) {
-  this.selectedProject = name;
-}
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  texts = {
+    headline: { DE: 'Meine Projekte', EN: 'My Projects' },
+  };
+
+  projects = ['DA Bubble', 'Sharkie', 'Join', 'Pokédex', 'Ongoing Project'];
+  selectedProject = this.projects[0];
+
+  onProjectSelected(name: string) {
+    this.selectedProject = name;
+  }
 }

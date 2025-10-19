@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { LangService } from '../../../services/lang.service';
+import { Lang } from '../../../types/lang.type';
 
 @Component({
   selector: 'app-menubar',
@@ -9,6 +11,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './menubar.component.scss',
 })
 export class MenubarComponent {
+
+    constructor(public langService: LangService) {}
+
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  texts = {
+    mobile: { DE: 'Projekt', EN: 'Project' },
+  };
   @Output() projectSelected = new EventEmitter<string>();
   @Input() activeProject!: string;
 
