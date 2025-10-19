@@ -27,7 +27,7 @@ form {
     padding-left: 27px;
   }
   > input[type="text"],
-  [type="email"] {
+  > input[type="email"] {
     height: 60px;
     border: solid 1px #89bcd9;
     border-radius: 30px;
@@ -35,7 +35,7 @@ form {
     background-color: #262e34;
     &:focus {
       outline: none;
-      background-color: #89bcd91f;
+      background-color: #89bcd91f !important;
       color: #f8f5ec;
       padding-left: 24px;
     }
@@ -95,6 +95,7 @@ form {
   right: 24px;
   top: 36px;
   width: 20px;
+  pointer-events: none;
 }
 
 .privacy-policy {
@@ -205,6 +206,24 @@ form {
   cursor: default;
 }
 
+input.error-placeholder::placeholder {
+  color: #e44c36;
+}
+
+textarea::placeholder {
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
+textarea.error-placeholder::placeholder {
+  color: #e44c36;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
 @media (max-width: 940px) {
   .contact-data-single {
     width: auto;
@@ -212,6 +231,12 @@ form {
   }
   .contact-data {
     gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .policy-text-error {
+    margin-top: 48px;
   }
 }
 

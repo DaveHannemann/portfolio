@@ -103,24 +103,13 @@ section {
   }
 
   .motivation {
-    width: 650px;
+    width: auto;
     text-align: center;
+    padding: 0px 16px;
   }
 
   .talk-box {
     display: none;
-  }
-}
-
-@media (max-width: 660px) {
-  .motivation {
-    width: 500px;
-  }
-}
-
-@media (max-width: 530px) {
-  .motivation {
-    width: 400px;
   }
 }
 
@@ -140,9 +129,6 @@ section {
       font-size: 32px;
     }
   }
-  .motivation {
-    width: 320px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -156,7 +142,7 @@ section {
 }
 
 @media (max-width: 350px) {
-  .motivation {
-    width: 280px;
+  .writer-line {
+    flex-direction: column;
   }
 }

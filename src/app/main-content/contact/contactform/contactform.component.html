@@ -6,19 +6,27 @@
           type="text"
           id="name"
           name="name"
-          placeholder=""
+          [placeholder]="
+            isMobile
+              ? nameInput.invalid && nameInput.touched
+                ? 'Your name is required'
+                : 'Your name'
+              : ''
+          "
           required
           [(ngModel)]="formData.name"
           #nameInput="ngModel"
           [ngClass]="{
-            'error-border': nameInput.invalid && nameInput.touched
+            'error-border': nameInput.invalid && nameInput.touched,
+            'error-placeholder':
+              isMobile && nameInput.invalid && nameInput.touched
           }"
         />
-        @if (nameInput.invalid && nameInput.touched) {
+        @if (!isMobile) { @if (nameInput.invalid && nameInput.touched) {
         <p class="error">Your name is required</p>
         } @else {
         <label for="name">Your name</label>
-        }
+        } }
         <img
           *ngIf="nameInput.valid && nameInput.touched"
           src="assets/img/done.png"
@@ -30,20 +38,28 @@
           type="email"
           id="email"
           name="email"
-          placeholder=""
+          [placeholder]="
+            isMobile
+              ? emailInput.invalid && emailInput.touched
+                ? 'Your Email is required'
+                : 'Your Email'
+              : ''
+          "
           required
           [(ngModel)]="formData.email"
           #emailInput="ngModel"
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           [ngClass]="{
-            'error-border': emailInput.invalid && emailInput.touched
+            'error-border': emailInput.invalid && emailInput.touched,
+            'error-placeholder':
+              isMobile && emailInput.invalid && emailInput.touched
           }"
         />
-        @if (emailInput.invalid && emailInput.touched) {
+        @if (!isMobile) { @if (emailInput.invalid && emailInput.touched) {
         <p class="error">Your Email is required</p>
         } @else {
         <label for="email">Your Email</label>
-        }
+        } }
         <img
           *ngIf="emailInput.valid && emailInput.touched"
           src="assets/img/done.png"
@@ -53,22 +69,30 @@
     </div>
 
     <div class="contact-message">
-      @if (messageInput.invalid && messageInput.touched) {
+      @if (!isMobile) { @if (messageInput.invalid && messageInput.touched) {
       <p class="error">Your Message is requred</p>
       } @else {
-      <label for="message">Your Message</label>
-      }
+      <label for="email">Your Message</label>
+      } }
       <textarea
         class="fontJosefin"
         minlength="3"
         id="message"
         name="message"
-        placeholder=""
+        [placeholder]="
+          isMobile
+            ? messageInput.invalid && messageInput.touched
+              ? 'Your message is required'
+              : 'Your message'
+            : ''
+        "
         required
         [(ngModel)]="formData.message"
         #messageInput="ngModel"
         [ngClass]="{
-          'error-border': messageInput.invalid && messageInput.touched
+          'error-border': messageInput.invalid && messageInput.touched,
+          'error-placeholder':
+            isMobile && messageInput.invalid && messageInput.touched
         }"
       ></textarea>
       <img
