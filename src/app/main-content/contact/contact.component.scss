@@ -210,6 +210,37 @@
       font-weight: 400;
     }
   }
+
+  .contact-box {
+    cursor: default;
+    > a {
+      &:hover {
+        color: #f8f5ec;
+        cursor: default;
+      }
+    }
+    &:hover > a {
+      color: #f8f5ec;
+      cursor: default;
+    }
+  }
+
+  .contact-box.active a {
+    color: #89bcd9;
+  }
+
+  .form-box {
+    > .arrow-mobile {
+      display: flex;
+      justify-content: center;
+      padding-top: 48px;
+      > img {
+        cursor: pointer;
+        width: 30px;
+        height: 60px;
+      }
+    }
+  }
 }
 
 @media (max-width: 420px) {
@@ -218,6 +249,16 @@
       > h1 {
         font-size: 32px;
       }
+    }
+  }
+
+  .contact-box {
+    gap: 8px;
+    > .contact-icon {
+      height: 28px;
+    }
+    > a {
+      font-size: 16px;
     }
   }
 }

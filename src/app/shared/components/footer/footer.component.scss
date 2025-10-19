@@ -1,4 +1,4 @@
-section {
+.desktop {
   padding-left: calc((100% - 1440px) / 2);
   padding-right: calc((100% - 1440px) / 2);
   background-color: #89bcd9;
@@ -8,12 +8,17 @@ section {
   align-items: center;
 }
 
+.mobile {
+  display: none;
+}
+
 .footer-box {
   width: 1216px;
   height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  padding: 0px 12px;
 }
 
 .legal-notice {
@@ -56,7 +61,7 @@ section {
 .social {
   display: flex;
   gap: 16px;
-   > a {
+  > a {
     position: relative;
     display: inline-block;
     cursor: default;
@@ -96,5 +101,90 @@ section {
 
   > a:nth-child(3)::after {
     background-image: url("/assets/img/linked_bot_hover.png");
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #89bcd9;
+    height: 243px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-box {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 12px;
+    gap: 32px;
+  }
+
+  .legal-notice {
+    flex-direction: row;
+    gap: 32px;
+    margin-left: 32px;
+    > a {
+      margin-right: 0px;
+      &:hover {
+        color: #262e34;
+      }
+      &:active {
+        color: #f8f5ec;
+      }
+    }
+  }
+
+  .social > a {
+    position: relative;
+    display: inline-block;
+
+    img {
+      width: 30px;
+      height: 30px;
+      transition: opacity 0.2s ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:active img {
+      opacity: 0;
+    }
+
+    &:active::after {
+      opacity: 1;
+    }
+  }
+
+  .social > a:nth-child(1)::after {
+    background-image: url("/assets/img/git_mobile_footer_active.png");
+  }
+
+  .social > a:nth-child(2)::after {
+    background-image: url("/assets/img/mail_mobile_footer_active.png");
+  }
+
+  .social > a:nth-child(3)::after {
+    background-image: url("/assets/img/linked_mobile_footer_active.png");
   }
 }

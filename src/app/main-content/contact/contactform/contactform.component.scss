@@ -208,6 +208,7 @@ form {
 
 input.error-placeholder::placeholder {
   color: #e44c36;
+  font-size: 16px;
 }
 
 textarea::placeholder {
@@ -238,10 +239,21 @@ textarea:focus::placeholder {
   .policy-text-error {
     margin-top: 48px;
   }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 570px) {
   .contact-data {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 334px) {
+  .policy-text-error {
+    margin-top: 64px;
   }
 }

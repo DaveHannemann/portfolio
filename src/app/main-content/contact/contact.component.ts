@@ -6,9 +6,15 @@ import { ContactformComponent } from './contactform/contactform.component';
   standalone: true,
   imports: [ContactformComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-phoneHover = false;
-mailHover = false;
+  phoneHover = false;
+  mailHover = false;
+
+  activeItem: string | null = null;
+
+  setActive(item: string) {
+    this.activeItem = item;
+  }
 }
