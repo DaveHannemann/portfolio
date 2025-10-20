@@ -31,10 +31,17 @@ export class ProjectsComponent {
     headline: { DE: 'Meine Projekte', EN: 'My Projects' },
   };
 
-  projects = ['DA Bubble', 'Sharkie', 'Join', 'Pokédex', 'Ongoing Project'];
-  selectedProject = this.projects[0];
+  projects = [
+    { key: 'dabubble', DE: 'DA Bubble', EN: 'DA Bubble' },
+    { key: 'sharkie', DE: 'Sharkie', EN: 'Sharkie' },
+    { key: 'join', DE: 'Join', EN: 'Join' },
+    { key: 'pokedex', DE: 'Pokédex', EN: 'Pokédex' },
+    { key: 'ongoing', DE: 'Aktuelles Projekt', EN: 'Ongoing Project' },
+  ];
 
-  onProjectSelected(name: string) {
-    this.selectedProject = name;
+  selectedProject = this.projects[0].key;
+
+  onProjectSelected(key: string) {
+    this.selectedProject = key;
   }
 }

@@ -1,15 +1,17 @@
 <section class="fontJosefin" *ngIf="projectData[project]">
   <div class="tech">
-    <h2 class="headline-mobile">{{ projectData[project].headline }}</h2>
-    <h4>Technologies</h4>
+    <h2 class="headline-mobile">{{ projectData[project].headline[activeLang] }}</h2>
+    <h4>{{ projectData[project].tech[activeLang] }}</h4>
     <div class="icons">
       <img *ngFor="let img of projectData[project].images" [src]="img" alt="" />
     </div>
     <span class="tech-names"
-      >Technologies: {{ projectData[project].technologie }}</span
+      >{{ projectData[project].tech[activeLang] }}:
+      {{ projectData[project].technologie[activeLang] }}</span
     >
     <span class="duration" *ngIf="projectData[project].duration"
-      >Duration: {{ projectData[project].duration }}</span
+      >{{ projectData[project].time[activeLang] }}:
+      {{ projectData[project].duration[activeLang] }}</span
     >
   </div>
   <div class="picture-box">

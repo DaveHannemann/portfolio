@@ -1,12 +1,16 @@
 <div class="icon-box fontJosefin" *ngIf="projectData[project]">
   <img class="list-icon" src="assets/img/list_marker.png" alt="" />
-  <div class="text-box" >
+  <div class="text-box">
     <div class="head">
-      <h3>About the Project</h3>
-      <span class="duration-desktop" *ngIf="projectData[project].duration">Duration: {{ projectData[project].duration }}</span>
+      <h3>
+        {{ activeLang === "DE" ? "Über das Projekt" : "About the Project" }}
+      </h3>
+      <span class="duration-desktop" *ngIf="projectData[project].duration"
+        >Duration: {{ projectData[project].duration[activeLang] }}</span
+      >
     </div>
     <p>
-      {{ projectData[project].text }}
+      {{ projectData[project].text[activeLang] }}
     </p>
   </div>
 </div>
@@ -14,12 +18,14 @@
 <div class="icon-box-mobile fontJosefin" *ngIf="projectData[project]">
   <div class="headline-mobile">
     <img class="list-icon" src="assets/img/list_marker.png" alt="" />
-    <h3>About the Project</h3>
+    <h3>
+      {{ activeLang === "DE" ? "Über das Projekt" : "About the Project" }}
+    </h3>
   </div>
 
   <div class="text-box-mobile">
     <p>
-      {{ projectData[project].text }}
+      {{ projectData[project].text[activeLang] }}
     </p>
   </div>
 </div>

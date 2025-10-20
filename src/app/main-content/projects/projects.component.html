@@ -2,6 +2,7 @@
   <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   <div class="full">
     <app-menubar
+      [projects]="projects"
       (projectSelected)="onProjectSelected($event)"
       [activeProject]="selectedProject"
     ></app-menubar>

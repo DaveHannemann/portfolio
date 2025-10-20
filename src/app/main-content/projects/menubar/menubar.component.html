@@ -2,10 +2,10 @@
   <button
     class="fontJosefin"
     *ngFor="let project of projects; let i = index"
-    (click)="selectProject(project)"
-    [ngClass]="{ active: project === activeProject }"
+    (click)="selectProject(project.key)"
+    [ngClass]="{ active: project.key === activeProject }"
   >
-    <strong>{{ i + 1 }}.</strong> {{ project }}
+    <strong>{{ i + 1 }}.</strong> {{ project[activeLang] }}
   </button>
 </section>
 
@@ -14,9 +14,9 @@
     <button
       class="fontJosefin"
       *ngFor="let project of row; let colIndex = index"
-      (click)="selectProject(project)"
+      (click)="selectProject(project.key)"
       [ngClass]="{
-        active: project === activeProject,
+        active: project.key === activeProject,
         highlight: rowIndex * 4 + colIndex < 4
       }"
     >

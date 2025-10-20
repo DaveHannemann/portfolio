@@ -1,9 +1,9 @@
 <div class="icon-box fontJosefin" *ngIf="projectData[project]">
   <img class="list-icon" src="assets/img/list_marker.png" alt="" />
   <div class="text-box">
-    <h3>{{ projectData[project].title }}</h3>
+    <h3>{{ projectData[project].title[activeLang] }}</h3>
     <p>
-      {{ projectData[project].text }}
+      {{ projectData[project].text[activeLang] }}
     </p>
   </div>
 </div>
@@ -11,12 +11,12 @@
 <div class="icon-box-mobile fontJosefin" *ngIf="projectData[project]">
   <div class="headline-mobile">
     <img class="list-icon" src="assets/img/list_marker.png" alt="" />
-    <h3>{{ projectData[project].title }}</h3>
+    <h3>{{ projectData[project].title[activeLang] }}</h3>
   </div>
 
   <div class="text-box-mobile">
     <p>
-      {{ projectData[project].text }}
+      {{ projectData[project].text[activeLang] }}
     </p>
   </div>
   <div class="project-buttons">

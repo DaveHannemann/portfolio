@@ -3,6 +3,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 
+type ProjectName = { key: string; DE: string; EN: string };
+
 @Component({
   selector: 'app-menubar',
   standalone: true,
@@ -11,8 +13,7 @@ import { Lang } from '../../../types/lang.type';
   styleUrl: './menubar.component.scss',
 })
 export class MenubarComponent {
-
-    constructor(public langService: LangService) {}
+  constructor(public langService: LangService) {}
 
   get activeLang(): Lang {
     return this.langService.activeLang;
@@ -23,23 +24,22 @@ export class MenubarComponent {
   };
   @Output() projectSelected = new EventEmitter<string>();
   @Input() activeProject!: string;
+  @Input() projects!: { key: string; DE: string; EN: string }[];
 
-  projects = ['DA Bubble', 'Sharkie', 'Join', 'Pokédex', 'Ongoing Project'];
-
-  selectProject(name: string) {
-    this.projectSelected.emit(name);
+  selectProject(key: string) {
+    this.projectSelected.emit(key);
   }
 
-projectRows: string[][] = [];
+  projectRows: ProjectName[][] = [];
 
-ngOnInit() {
-  this.splitProjects();
-}
-
-splitProjects() {
-  this.projectRows = [];
-  for (let i = 0; i < this.projects.length; i += 4) {
-    this.projectRows.push(this.projects.slice(i, i + 4));
+  ngOnInit() {
+    this.splitProjects();
   }
-}
+
+  splitProjects() {
+    this.projectRows = [];
+    for (let i = 0; i < this.projects.length; i += 4) {
+      this.projectRows.push(this.projects.slice(i, i + 4));
+    }
+  }
 }

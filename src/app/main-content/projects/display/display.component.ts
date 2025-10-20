@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { LangService } from '../../../services/lang.service';
+import { Lang } from '../../../types/lang.type';
 
 @Component({
   selector: 'app-display',
@@ -9,13 +11,23 @@ import { Component, Input } from '@angular/core';
   styleUrl: './display.component.scss',
 })
 export class DisplayComponent {
+  constructor(public langService: LangService) {}
   @Input() project!: string;
 
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
   projectData: any = {
-    'DA Bubble': {
+    dabubble: {
       headline: 'DA Bubble',
-      technologie: 'Angular, TypeScript, Firebase',
-      duration: 'TBD',
+      technologie: {
+        DE: 'Angular, TypeScript, Firebase',
+        EN: 'Angular, TypeScript, Firebase',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      duration: { DE: 'TBD', EN: 'TBD' },
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',
@@ -27,10 +39,15 @@ export class DisplayComponent {
         github: '',
       },
     },
-    Sharkie: {
+    sharkie: {
       headline: 'Sharkie',
-      technologie: 'HTML, CSS, JavaScript',
-      duration: '5 weeks',
+      technologie: {
+        DE: 'HTML, CSS, JavaScript',
+        EN: 'HTML, CSS, JavaScript',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      duration: { DE: '5 Wochen', EN: '5 weeks' },
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -42,10 +59,15 @@ export class DisplayComponent {
         github: '',
       },
     },
-    Join: {
+    join: {
       headline: 'Join',
-      technologie: 'HTML, CSS, JavaScript',
-      duration: '2 months',
+      technologie: {
+        DE: 'HTML, CSS, JavaScript',
+        EN: 'HTML, CSS, JavaScript',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      duration: { DE: '2 Monate', EN: '2 months' },
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -57,10 +79,15 @@ export class DisplayComponent {
         github: '',
       },
     },
-    Pokédex: {
+    pokedex: {
       headline: 'Pokédex',
-      technologie: 'HTML, CSS, JavaScript, API',
-      duration: '2 weeks',
+      technologie: {
+        DE: 'HTML, CSS, JavaScript, API',
+        EN: 'HTML, CSS, JavaScript, API',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      duration: { DE: '2 Wochen', EN: '2 weeks' },
       images: [
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
@@ -73,9 +100,14 @@ export class DisplayComponent {
         github: '',
       },
     },
-    'Ongoing Project': {
-      headline: 'Ongoing Project',
-      technologie: 'Angular, TypeScript, Firebase',
+    ongoing: {
+      headline: { DE: 'Aktuelles Project', EN: 'Ongoing Project' },
+      technologie: {
+        DE: 'Angular, TypeScript, Firebase',
+        EN: 'Angular, TypeScript, Firebase',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
       images: [
         'assets/img/angular_learn.png',
         'assets/img/typescript_learn.png',
