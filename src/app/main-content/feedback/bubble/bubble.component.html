@@ -19,11 +19,11 @@
       <div class="feedback-header">
         <h4>{{ feedback.name }}</h4>
         <span
-          >{{ feedback.class }} <span class="project"> {{ feedback.project }} </span></span
+          >{{ feedback.text[activeLang].class }} <span class="project"> {{ feedback.text[activeLang].project }} </span></span
         >
       </div>
       <div class="feedback-text">
-        <p>"{{ feedback.message }}"</p>
+        <p>"{{ feedback.text[activeLang].message }}"</p>
       </div>
       <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
     </div>
@@ -43,11 +43,11 @@
       <div class="feedback-header">
         <h4>{{ feedback.name }}</h4>
         <span
-          >{{ feedback.class }} <span class="project"> {{ feedback.project }} </span></span
+          >{{ feedback.text[activeLang].class }} <span class="project"> {{ feedback.text[activeLang].project }} </span></span
         >
       </div>
       <div class="feedback-text">
-        <p>"{{ feedback.message }}"</p>
+        <p>"{{ feedback.text[activeLang].message }}"</p>
       </div>
       <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
     </div>

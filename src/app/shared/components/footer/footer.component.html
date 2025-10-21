@@ -1,7 +1,8 @@
 <section class="fontJosefin desktop">
   <div class="footer-box">
     <div class="legal-notice">
-      <a href="">Legal Notice</a> <span>© 2025 David Hannemann</span>
+      <a href="">{{ texts.legal[activeLang] }}</a>
+      <span>© 2025 David Hannemann</span>
     </div>
     <div class="logo">
       <img src="/assets/img/logo_header.png" alt="" />
@@ -23,18 +24,19 @@
       <span class="fontAnta name">D.Hannemann</span>
       <span class="job">developer</span>
     </div>
-<div class="social">
-  <a
-    *ngFor="let icon of socialIcons"
-    (click)="activateIcon(icon)"
-    (mouseenter)="onHover(icon)"
-    (mouseleave)="onLeave(icon)"
-  >
-    <img [src]="icon.current" alt="" />
-  </a>
-</div>
+    <div class="social">
+      <a
+        *ngFor="let icon of socialIcons"
+        (click)="activateIcon(icon)"
+        (mouseenter)="onHover(icon)"
+        (mouseleave)="onLeave(icon)"
+      >
+        <img [src]="icon.current" alt="" />
+      </a>
+    </div>
     <div class="legal-notice">
-      <a href="">Legal Notice</a> <span>© 2025 David Hannemann</span>
+      <a href="">{{ texts.legal[activeLang] }}</a>
+      <span>© 2025 David Hannemann</span>
     </div>
   </div>
 </section>

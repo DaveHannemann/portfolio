@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Lang } from '../../../types/lang.type';
+import { LangService } from '../../../services/lang.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +11,19 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  constructor(public langService: LangService) {}
+
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  texts = {
+    legal: {
+      DE: 'Rechtlicher Hinweis',
+      EN: 'Legal Notice',
+    },
+  };
+
   socialIcons = [
     {
       img1: 'assets/img/git_mobile_footer.png',

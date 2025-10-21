@@ -1,16 +1,13 @@
 <section class="desktop" id="contact">
   <div class="headline">
-    <h1 class="fontAnta">Contact me</h1>
-    <img src="assets/img/arrow_up.png" alt="" />
+    <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
+    <img (click)="scrollTo('landing')" src="assets/img/arrow_up.png" alt="" />
   </div>
   <div class="fontJosefin form-box">
     <div class="contact-info">
       <div class="contact-motive">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          quisquam impedit eius consequatur. Quam, sed vel dignissimos,
-          exercitationem officiis incidunt maiores sapiente dolore odit,
-          voluptas autem doloribus aliquid molestiae explicabo.
+          {{ texts.motive[activeLang] }}
         </p>
       </div>
       <div class="flex-16">
@@ -54,9 +51,9 @@
   </div>
 </section>
 
-<section class="mobile" id="contact">
+<section class="mobile" id="contact-mobile">
   <div class="headline">
-    <h1 class="fontAnta">Contact me</h1>
+    <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   </div>
   <div class="fontJosefin form-box">
     <div class="contact-info">
@@ -95,14 +92,13 @@
     </div>
     <div class="contact-motive">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-        quisquam impedit eius consequatur. Quam, sed vel dignissimos,
-        exercitationem officiis incidunt maiores sapiente dolore odit, voluptas
-        autem doloribus aliquid molestiae explicabo.
+        {{ texts.motive[activeLang] }}
       </p>
-      <span>Let us work together!</span>
+      <span>{{ texts.team[activeLang] }}</span>
     </div>
     <app-contactform></app-contactform>
-    <div class="arrow-mobile"><img src="assets/img/arrow_up.png" alt="" /></div>
+    <div class="arrow-mobile">
+      <img (click)="scrollTo('landing-mobile')" src="assets/img/arrow_up.png" alt="" />
+    </div>
   </div>
 </section>

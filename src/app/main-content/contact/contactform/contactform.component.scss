@@ -102,24 +102,27 @@ form {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.policy-text-container {
+  display: flex;
+  gap: 8px;
   > p {
     cursor: default;
     font-size: 14px;
-    > a {
-      text-decoration: none;
-      color: #89bcd9;
-      &:hover {
-        color: #f8f5ec;
-      }
+  }
+  > a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #89bcd9;
+    &:hover {
+      color: #f8f5ec;
     }
   }
 }
 
 .policy-box {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 8px;
   > .policy-check {
     display: block;
     position: relative;
@@ -200,9 +203,8 @@ form {
 .policy-text-error {
   color: #e44c36;
   position: absolute;
-  margin-left: 32px;
   font-size: 14px;
-  margin-top: 40px;
+  margin-top: 16px;
   cursor: default;
 }
 

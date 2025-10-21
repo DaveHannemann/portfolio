@@ -10,8 +10,8 @@
           [placeholder]="
             isMobile
               ? nameInput.invalid && nameInput.touched
-                ? 'Your name is required'
-                : 'Your name'
+                ? texts.nameError[activeLang]
+                : texts.name[activeLang]
               : ''
           "
           required
@@ -24,9 +24,9 @@
           }"
         />
         @if (!isMobile) { @if (nameInput.invalid && nameInput.touched) {
-        <p class="error">Your name is required</p>
+        <p class="error">{{ texts.nameError[activeLang] }}</p>
         } @else {
-        <label for="name">Your name</label>
+        <label for="name">{{ texts.name[activeLang] }}</label>
         } }
         <img
           *ngIf="nameInput.valid && nameInput.touched"
@@ -43,8 +43,8 @@
           [placeholder]="
             isMobile
               ? emailInput.invalid && emailInput.touched
-                ? 'Your Email is required'
-                : 'Your Email'
+                ? texts.mailError[activeLang]
+                : texts.mail[activeLang]
               : ''
           "
           required
@@ -58,9 +58,9 @@
           }"
         />
         @if (!isMobile) { @if (emailInput.invalid && emailInput.touched) {
-        <p class="error">Your Email is required</p>
+        <p class="error">{{ texts.mailError[activeLang] }}</p>
         } @else {
-        <label for="email">Your Email</label>
+        <label for="email">{{ texts.mail[activeLang] }}</label>
         } }
         <img
           *ngIf="emailInput.valid && emailInput.touched"
@@ -72,9 +72,9 @@
 
     <div class="contact-message">
       @if (!isMobile) { @if (messageInput.invalid && messageInput.touched) {
-      <p class="error">Your Message is requred</p>
+      <p class="error">{{ texts.messageError[activeLang] }}</p>
       } @else {
-      <label for="email">Your Message</label>
+      <label for="email">{{ texts.message[activeLang] }}</label>
       } }
       <textarea
         class="fontJosefin"
@@ -84,8 +84,8 @@
         [placeholder]="
           isMobile
             ? messageInput.invalid && messageInput.touched
-              ? 'Your message is required'
-              : 'Your message'
+              ? texts.messageError[activeLang]
+              : texts.message[activeLang]
             : ''
         "
         required
@@ -131,13 +131,16 @@
           class="policy-check"
         />
       </div>
-      <p>
-        I've read the <a href="">privacy policy</a> and agree to the processing
-        of my data as outlined.
-      </p>
-      <p *ngIf="!policyClicked && policyTouched" class="policy-text-error">
-        Please accept the privacy policy.
-      </p>
+      <div class="policy-text-container">
+        <p>
+          {{ texts.policyPre[activeLang] }}
+        </p>
+        <a href="">{{ texts.policy[activeLang] }}</a>
+        <p>{{ texts.policySuf[activeLang] }}</p>
+        <p *ngIf="!policyClicked && policyTouched" class="policy-text-error">
+          {{ texts.policyError[activeLang] }}
+        </p>
+      </div>
     </div>
     <div class="submit-button">
       <input

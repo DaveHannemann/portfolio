@@ -158,6 +158,7 @@ a {
     scroll-snap-type: x mandatory;
     gap: 16px;
     padding: 16px;
+    overflow-y: hidden;
 
     .feedback-container {
       flex: 0 0 auto;

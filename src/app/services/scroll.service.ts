@@ -7,7 +7,7 @@ export class ScrollService {
   activeSection$ = this._activeSection.asObservable();
 
   scrollToSection(sectionId: string) {
-    this._activeSection.next(sectionId); // <-- aktive Section setzen
+    this._activeSection.next(sectionId);
 
     const target = document.getElementById(sectionId);
     if (!target) return;

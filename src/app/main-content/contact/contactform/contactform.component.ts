@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Lang } from '../../../types/lang.type';
+import { LangService } from '../../../services/lang.service';
 
 @Component({
   selector: 'app-contactform',
@@ -11,6 +13,55 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
+  constructor(public langService: LangService) {}
+
+  get activeLang(): Lang {
+    return this.langService.activeLang;
+  }
+
+  texts = {
+    name: {
+      DE: 'Dein Name',
+      EN: 'Your name',
+    },
+    nameError: {
+      DE: 'Dein Name wird benötigt',
+      EN: 'Your name is required',
+    },
+    mail: {
+      DE: 'Deine E-Mail',
+      EN: 'Your Email',
+    },
+    mailError: {
+      DE: 'Deine E-Mail wird benötigt',
+      EN: 'Your Email is required',
+    },
+    message: {
+      DE: 'Deine Nachricht',
+      EN: 'Your Message',
+    },
+    messageError: {
+      DE: 'Deine Nachricht wird benötigt',
+      EN: 'Your Message is required',
+    },
+    policyPre: {
+      DE: 'Ich habe den',
+      EN: 'I’ve read the',
+    },
+    policy: {
+      DE: 'Datenschutz',
+      EN: 'privacy policy',
+    },
+    policySuf: {
+      DE: 'gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.',
+      EN: 'and agree to the processing of my data as outlined.',
+    },
+    policyError: {
+      DE: 'Bitte akzeptieren Sie den Datenschutz.',
+      EN: 'Please accept the privacy policy.',
+    },
+  };
+
   isMobile = window.innerWidth <= 768;
 
   @HostListener('window:resize')
