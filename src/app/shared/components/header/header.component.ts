@@ -72,8 +72,8 @@ export class HeaderComponent implements OnInit {
 
       const rect = el.getBoundingClientRect();
       const inView =
-        rect.top <= window.innerHeight * 0.4 &&
-        rect.bottom >= window.innerHeight * 0.4;
+        rect.top <= window.innerHeight * 0.2 &&
+        rect.bottom >= window.innerHeight * 0.2;
 
       if (inView) {
         this.activeSection = id;
