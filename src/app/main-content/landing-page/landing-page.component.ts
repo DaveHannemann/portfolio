@@ -14,27 +14,15 @@ export class LandingPageComponent {
   portraitHover = false;
   logoHover = false;
   socialHover = false;
-  burgerHover = false;
-  headerVisible = false;
+
 
   constructor(private scrollService: ScrollService, private ui: UiService) {}
 
-  ngOnInit() {
-    this.ui.headerVisible$.subscribe((v) => (this.headerVisible = v));
-  }
 
-  toggleHeader() {
-    this.ui.toggleHeader();
-  }
 
   scrollTo(sectionId: string) {
     this.scrollService.scrollToSection(sectionId);
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
-    if (this.headerVisible && window.scrollY > 170) {
-      this.ui.setHeaderVisible(false);
-    }
-  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 import { ScrollService } from '../../../services/scroll.service';
@@ -13,7 +13,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
+  @Input() headerFixed = false;
   headerVisible = false;
+  burgerHover = false;
   activeSection: string = '';
 
   constructor(
@@ -24,6 +26,10 @@ export class HeaderComponent implements OnInit {
     this.scrollService.activeSection$.subscribe(
       (section) => (this.activeSection = section)
     );
+  }
+
+  toggleHeader() {
+    this.ui.toggleHeader();
   }
 
   ngOnInit() {
@@ -61,8 +67,11 @@ export class HeaderComponent implements OnInit {
     this.scrollService.scrollToSection(sectionId);
   }
 
-  @HostListener('window:scroll', [])
-  onScroll() {
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    if (this.headerVisible && window.scrollY > 170) {
+      this.ui.setHeaderVisible(false);
+    }
     const sections = ['landing', 'why-me', 'skills', 'projects', 'contact'];
     let found = false;
 
@@ -87,7 +96,11 @@ export class HeaderComponent implements OnInit {
       window.innerHeight + window.scrollY >= document.body.scrollHeight - 10
     ) {
       this.activeSection = 'contact';
-      found = true;
+    }
+    const wasFixed = this.headerFixed;
+    this.headerFixed = window.scrollY > 200;
+
+    if (wasFixed !== this.headerFixed) {
     }
   }
 }

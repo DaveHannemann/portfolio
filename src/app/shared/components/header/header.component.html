@@ -38,34 +38,77 @@
   </div>
 </section>
 
-<section class="mobile" *ngIf="headerVisible">
-  <img src="/assets/img/overlay.png" alt="" />
-  <div class="burger-box fontJosefin">
-    <nav>
-      <a
-        (click)="scrollTo('why-me')"
-        >{{ texts.why[activeLang] }}</a
-      >
-      <a
-        (click)="scrollTo('skills')"
-        >{{ texts.skill[activeLang] }}</a
-      >
-      <a
-        (click)="scrollTo('projects')"
-        >{{ texts.project[activeLang] }}</a
-      >
-      <a
-        (click)="scrollTo('contact')"
-        >{{ texts.contact[activeLang] }}</a
-      >
-    </nav>
-    <div class="switch">
-      <span (click)="switchLang('DE')" [class.active]="activeLang === 'DE'"
-        >DE</span
-      >
-      <span (click)="switchLang('EN')" [class.active]="activeLang === 'EN'"
-        >EN</span
-      >
+<section class="mobile">
+  <div class="top-box" [class.fixed]="headerFixed">
+    <div class="logo">
+      <img
+        [src]="
+          headerFixed
+            ? 'assets/img/logo_header.png'
+            : 'assets/img/logo_default.png'
+        "
+        alt="Logo"
+      />
+      <span class="fontAnta name">D.Hannemann</span>
+      <span class="job"     [ngStyle]="{
+      color: headerFixed ? '#262e34' : '#89bcd9'
+    }">developer</span>
+    </div>
+    <div
+      class="burger-container"
+      (mouseenter)="burgerHover = true"
+      (mouseleave)="burgerHover = false"
+    >
+      <img
+        *ngIf="!headerVisible"
+        class="burger default"
+        src="assets/img/burger_default.png"
+        [class.hidden]="burgerHover"
+        [class.filtered]="headerFixed"
+      />
+      <img
+        *ngIf="!headerVisible"
+        (click)="toggleHeader()"
+        class="burger hover-img"
+        src="assets/img/burger_hover.png"
+        [class.visible]="burgerHover"
+        [class.filtered]="headerFixed"
+      />
+      <img
+        *ngIf="headerVisible"
+        class="burger default"
+        src="assets/img/burger_close.png"
+        [class.hidden]="burgerHover"
+        [class.filtered]="headerFixed"
+      />
+      <img
+        *ngIf="headerVisible"
+        (click)="toggleHeader()"
+        class="burger hover-img"
+        src="assets/img/burger_close_hover.png"
+        [class.visible]="burgerHover"
+        [class.filtered]="headerFixed"
+      />
+    </div>
+  </div>
+
+  <div *ngIf="headerVisible" class="mobile-overlay">
+    <img src="/assets/img/overlay.png" alt="" />
+    <div class="burger-box fontJosefin">
+      <nav>
+        <a (click)="scrollTo('why-me')">{{ texts.why[activeLang] }}</a>
+        <a (click)="scrollTo('skills')">{{ texts.skill[activeLang] }}</a>
+        <a (click)="scrollTo('projects')">{{ texts.project[activeLang] }}</a>
+        <a (click)="scrollTo('contact')">{{ texts.contact[activeLang] }}</a>
+      </nav>
+      <div class="switch">
+        <span (click)="switchLang('DE')" [class.active]="activeLang === 'DE'"
+          >DE</span
+        >
+        <span (click)="switchLang('EN')" [class.active]="activeLang === 'EN'"
+          >EN</span
+        >
+      </div>
     </div>
   </div>
 </section>

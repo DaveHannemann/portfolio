@@ -61,45 +61,7 @@
 </section>
 
 <section class="mobile" id="landing-mobile">
-  <div class="top-box">
-    <div class="logo">
-      <img src="assets/img/logo_default.png" />
-      <span class="fontAnta name">D.Hannemann</span>
-      <span class="job">developer</span>
-    </div>
-    <div
-      class="burger-container"
-      (mouseenter)="burgerHover = true"
-      (mouseleave)="burgerHover = false"
-    >
-      <img
-        *ngIf="!headerVisible"
-        class="burger default"
-        src="assets/img/burger_default.png"
-        [class.hidden]="burgerHover"
-      />
-      <img
-        *ngIf="!headerVisible"
-        (click)="toggleHeader()"
-        class="burger hover-img"
-        src="assets/img/burger_hover.png"
-        [class.visible]="burgerHover"
-      />
-      <img
-        *ngIf="headerVisible"
-        class="burger default"
-        src="assets/img/burger_close.png"
-        [class.hidden]="burgerHover"
-      />
-      <img
-        *ngIf="headerVisible"
-        (click)="toggleHeader()"
-        class="burger hover-img"
-        src="assets/img/burger_close_hover.png"
-        [class.visible]="burgerHover"
-      />
-    </div>
-  </div>
+
 
   <div>
     <img class="mobile-me" src="assets/img/nice.png" alt="" />
