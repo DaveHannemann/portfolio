@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Lang } from '../types/lang.type';
 import { LangService } from '../services/lang.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-legal-notice',
@@ -11,10 +12,14 @@ import { LangService } from '../services/lang.service';
   styleUrl: './legal-notice.component.scss',
 })
 export class LegalNoticeComponent {
-  constructor(public langService: LangService) {}
+  constructor(public langService: LangService, private location: Location) {}
 
   get activeLang(): Lang {
     return this.langService.activeLang;
+  }
+
+  goBack() {
+    this.location.back();
   }
 
   texts = {
@@ -130,11 +135,11 @@ export class LegalNoticeComponent {
       DE: ' und/oder Ihrem Verstoß gegen diese rechtlichen Hinweise ergeben.',
       EN: ' and/or your breach of this Legal Notice.',
     },
-        contact: {
+    contact: {
       DE: 'Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter',
       EN: 'For any questions or notices, please contact us at',
     },
-        date: {
+    date: {
       DE: 'Datum: 24. Oktober 2025',
       EN: 'Date: October 24, 2025',
     },

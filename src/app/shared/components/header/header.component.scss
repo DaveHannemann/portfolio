@@ -143,6 +143,7 @@ nav {
     display: flex;
     position: relative;
     justify-content: center;
+    height: 85px;
     > img {
       width: 530px;
       position: absolute;
@@ -152,6 +153,7 @@ nav {
   .top-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 36px 36px;
     width: -webkit-fill-available;
   }
@@ -168,6 +170,9 @@ nav {
 
   .burger-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     > .burger {
       cursor: pointer;
@@ -201,14 +206,17 @@ nav {
     align-items: center;
     cursor: default;
     position: relative;
+    > img {
+      width: 52px;
+    }
     > .name {
       color: #f8f5ec;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     > .job {
       font-weight: 300;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 

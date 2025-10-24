@@ -17,19 +17,15 @@
 
 @media (max-width: 768px) {
   .main-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
   }
 
   .main-header.fixed {
-    position: absolute;
+    position: fixed;
     top: 0px;
     bottom: auto;
     z-index: 1000;
   }
-}
-
-@media (max-width: 460px) {
-
 }

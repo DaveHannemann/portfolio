@@ -4,14 +4,18 @@
   background: #262e34;
   display: flex;
   flex-direction: column;
-  gap: 64px;
   cursor: default;
-  > h1 {
+  > div {
     padding-top: 64px;
     padding-left: 200px;
-    color: #89bcd9;
-    font-weight: 400;
-    font-size: 54px;
+    > img {
+      display: none;
+    }
+    > h1 {
+      color: #89bcd9;
+      font-weight: 400;
+      font-size: 54px;
+    }
   }
 }
 
@@ -74,7 +78,7 @@
 
 @media (max-width: 1200px) {
   .desktop {
-    > h1 {
+    > div {
       padding-left: 150px;
     }
   }
@@ -86,7 +90,7 @@
 
 @media (max-width: 1000px) {
   .desktop {
-    > h1 {
+    > div {
       padding-left: 100px;
     }
   }
@@ -98,8 +102,18 @@
 
 @media (max-width: 768px) {
   .desktop {
-    > h1 {
+    padding-top: 64px;
+    > div {
       padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 32px;
+      > img {
+        display: flex;
+        margin-top: 24px;
+      }
     }
   }
   .legal-box {
@@ -110,7 +124,7 @@
 
 @media (max-width: 600px) {
   .desktop {
-    > h1 {
+    > div {
       padding-left: 30px;
     }
   }
@@ -122,7 +136,7 @@
 
 @media (max-width: 450px) {
   .desktop {
-    > h1 {
+    > div {
       padding-left: 16px;
     }
   }

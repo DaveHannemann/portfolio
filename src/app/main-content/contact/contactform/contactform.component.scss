@@ -33,6 +33,7 @@ form {
     border-radius: 30px;
     font-size: 18px;
     background-color: #262e34;
+    cursor: default;
     &:focus {
       outline: none;
       background-color: #89bcd91f !important;
@@ -74,6 +75,7 @@ form {
     font-size: 18px;
     background-color: #262e34;
     resize: none;
+    cursor: default;
     &:focus {
       outline: none;
       background-color: #89bcd91f;
@@ -238,13 +240,22 @@ textarea:focus::placeholder {
 }
 
 @media (max-width: 768px) {
-  .policy-text-error {
-    margin-top: 48px;
-  }
-
   input::placeholder,
   textarea::placeholder {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 587px) {
+  .policy-text-container {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 578px) {
+  .policy-text-error {
+    margin-top: 36px;
   }
 }
 
@@ -254,8 +265,8 @@ textarea:focus::placeholder {
   }
 }
 
-@media (max-width: 334px) {
+@media (max-width: 405px) {
   .policy-text-error {
-    margin-top: 64px;
+    margin-top: 50px;
   }
 }

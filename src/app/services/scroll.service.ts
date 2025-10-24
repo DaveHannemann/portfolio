@@ -1,19 +1,37 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class ScrollService {
   private _activeSection = new BehaviorSubject<string>('');
   activeSection$ = this._activeSection.asObservable();
 
+  constructor(private router: Router) {}
+
   scrollToSection(sectionId: string) {
-    this._activeSection.next(sectionId);
+    if (this.router.url !== '/') {
+      this._activeSection.next('');
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => this.performScroll(sectionId), 100);
+      });
+    } else {
+      this.performScroll(sectionId);
+    }
+  }
+
+  performScroll(sectionId: string) {
+    if (this.router.url === '/') {
+      this._activeSection.next(sectionId);
+    }
 
     const target = document.getElementById(sectionId);
     if (!target) return;
 
+    const offset = -80;
+
     const start = window.scrollY;
-    const end = target.getBoundingClientRect().top + window.scrollY;
+    const end = target.getBoundingClientRect().top + window.scrollY + offset;
     const distance = end - start;
     const maxOvershoot = Math.min(30, Math.abs(distance) * 0.05);
     const duration = 600;

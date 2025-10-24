@@ -69,7 +69,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
-    if (this.headerVisible && window.scrollY > 170) {
+    if (this.headerVisible && window.scrollY > 60) {
       this.ui.setHeaderVisible(false);
     }
     const sections = ['landing', 'why-me', 'skills', 'projects', 'contact'];

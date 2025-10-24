@@ -33,11 +33,15 @@ export class AppComponent {
     });
   }
 
-    ngAfterViewInit() {
+ngAfterViewInit() {
+  if (window.innerWidth >= 768) {
     const observer = new IntersectionObserver(([entry]) => {
       this.headerFixed = !entry.isIntersecting;
     }, { threshold: 0 });
 
     observer.observe(this.headerTrigger.nativeElement);
+  } else {
+    this.headerFixed = true;
   }
+}
 }
