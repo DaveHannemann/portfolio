@@ -100,7 +100,7 @@ export class ContactformComponent {
   };
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://david-hannemann.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
