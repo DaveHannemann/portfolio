@@ -1,6 +1,6 @@
-<section class="desktop">
+<section class="desktop" [@listAnimation]>
   <div
-    *ngFor="let feedback of feedbackData; let i = index"
+    *ngFor="let feedback of visibleFeedback; let i = index; trackBy: trackByIndex"
     class="feedback-container"
     (mouseenter)="hoverIndex = i"
     (mouseleave)="hoverIndex = null"

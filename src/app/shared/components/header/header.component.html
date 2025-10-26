@@ -40,7 +40,7 @@
 
 <section class="mobile">
   <div class="top-box" [class.fixed]="headerFixed">
-    <div class="logo">
+    <div (click)="scrollTo('landing-mobile')" class="logo">
       <img
         [src]="
           headerFixed

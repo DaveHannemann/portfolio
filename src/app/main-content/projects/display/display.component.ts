@@ -56,7 +56,7 @@ export class DisplayComponent {
       projectPicture: 'assets/img/sharkie.png',
       links: {
         live: '',
-        github: '',
+        github: 'https://github.com/DaveHannemann/Sharkie',
       },
     },
     join: {
@@ -76,7 +76,7 @@ export class DisplayComponent {
       projectPicture: 'assets/img/join.png',
       links: {
         live: '',
-        github: '',
+        github: 'https://github.com/DaveHannemann/JoinBoard',
       },
     },
     pokedex: {
@@ -97,7 +97,7 @@ export class DisplayComponent {
       projectPicture: 'assets/img/pokedex.png',
       links: {
         live: '',
-        github: '',
+        github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
     ongoing: {
@@ -114,10 +114,6 @@ export class DisplayComponent {
         'assets/img/firebase_learn.png',
       ],
       projectPicture: 'assets/img/soon.jpg',
-      links: {
-        live: '',
-        github: '',
-      },
     },
   };
 }

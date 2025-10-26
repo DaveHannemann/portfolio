@@ -2,6 +2,28 @@
     margin: 0;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #89bcd9 #262e34;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #262e34;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #89bcd9;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
 /* josefin-sans-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

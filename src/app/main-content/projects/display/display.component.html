@@ -21,7 +21,7 @@
       alt=""
     />
   </div>
-  <div class="project-buttons">
+  <div class="project-buttons" *ngIf="projectData[project].links">
     <a class="live" [href]="projectData[project].links.live" target="_blank"
       >Live Test</a
     >

@@ -37,6 +37,13 @@
   }
 }
 
+.feedback-container {
+  transition: transform 0.3s ease;
+}
+.feedback-container.hidden {
+  display: none;
+}
+
 .feedback-box {
   position: absolute;
   top: 75px;
@@ -159,6 +166,7 @@ a {
     gap: 16px;
     padding: 16px;
     overflow-y: hidden;
+    scrollbar-color: auto;
 
     .feedback-container {
       flex: 0 0 auto;

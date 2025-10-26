@@ -135,7 +135,7 @@
         <p>
           {{ texts.policyPre[activeLang] }}
         </p>
-        <a href="">{{ texts.policy[activeLang] }}</a>
+        <a routerLink="/policy">{{ texts.policy[activeLang] }}</a>
         <p>{{ texts.policySuf[activeLang] }}</p>
         <p *ngIf="!policyClicked && policyTouched" class="policy-text-error">
           {{ texts.policyError[activeLang] }}
@@ -151,4 +151,7 @@
       />
     </div>
   </form>
+  <div class="feedback-overlay" *ngIf="showFeedback" [ngClass]="feedbackType">
+    {{ feedbackMessage }}
+  </div>
 </div>

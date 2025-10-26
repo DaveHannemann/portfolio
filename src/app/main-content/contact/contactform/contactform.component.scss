@@ -5,6 +5,10 @@ form {
   width: 100%;
 }
 
+.container{
+  position: relative;
+}
+
 .contact-data {
   display: flex;
   justify-content: space-between;
@@ -16,16 +20,19 @@ form {
   width: 445px;
   height: 80px;
   position: relative;
+
   > label {
     font-size: 14px;
     color: #89bcd9;
     padding-left: 27px;
   }
+
   > .error {
     font-size: 14px;
     color: #e44c36;
     padding-left: 27px;
   }
+
   > input[type="text"],
   > input[type="email"] {
     height: 60px;
@@ -34,21 +41,35 @@ form {
     font-size: 18px;
     background-color: #262e34;
     cursor: default;
+    padding-left: 24px;
+
     &:focus {
       outline: none;
       background-color: #89bcd91f !important;
       color: #f8f5ec;
-      padding-left: 24px;
     }
-    &:valid {
-      color: #fffdfd;
-      padding-left: 24px;
-      background-color: #262e34;
-    }
+
+    &:valid,
     &:invalid {
       color: #fffdfd;
-      padding-left: 24px;
       background-color: #262e34;
+    }
+
+    // Chrome / Safari / Edge
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0px 1000px #262e34 inset;
+      -webkit-text-fill-color: #fffdfd;
+      transition: background-color 5000s ease-in-out 0s;
+      border-radius: 30px;
+    }
+
+    // Firefox
+    &:-moz-autofill {
+      box-shadow: 0 0 0px 1000px #262e34 inset !important;
+      -moz-text-fill-color: #fffdfd !important;
     }
   }
 }
@@ -227,6 +248,35 @@ textarea.error-placeholder::placeholder {
 input:focus::placeholder,
 textarea:focus::placeholder {
   color: transparent;
+}
+
+.feedback-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translate(-50%, -60%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.success {
+    background-color: #4caf50;
+  }
+
+  &.error {
+    background-color: #f44336;
+  }
+
+  &:not([hidden]) {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (max-width: 940px) {
