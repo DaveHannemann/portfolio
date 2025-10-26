@@ -91,7 +91,7 @@ export class ContactformComponent {
   policyClicked = false;
   policyTouched = false;
   formSubmitted = false;
-  mailTest = true;
+  // mailTest = true;
 
   formData = {
     name: '',
@@ -111,12 +111,15 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.formData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.policyHover = false;
+            this.policyClicked = false;
+            this.policyTouched = false;
             this.showFeedbackMessage('success');
           },
           error: (error) => {
@@ -125,10 +128,14 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.showFeedbackMessage('success');
-    }
+    } 
+    // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    //   ngForm.resetForm();
+    //   this.policyHover = false;
+    //   this.policyClicked = false;
+    //   this.policyTouched = false;
+    //   this.showFeedbackMessage('success');
+    // }
   }
 
   togglePolicy() {

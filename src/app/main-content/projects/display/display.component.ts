@@ -55,7 +55,7 @@ export class DisplayComponent {
       ],
       projectPicture: 'assets/img/sharkie.png',
       links: {
-        live: '',
+        live: 'https://david-hannemann.de/Sharkie',
         github: 'https://github.com/DaveHannemann/Sharkie',
       },
     },
@@ -75,7 +75,7 @@ export class DisplayComponent {
       ],
       projectPicture: 'assets/img/join.png',
       links: {
-        live: '',
+        live: 'https://david-hannemann.de/JoinBoard',
         github: 'https://github.com/DaveHannemann/JoinBoard',
       },
     },
@@ -96,7 +96,7 @@ export class DisplayComponent {
       ],
       projectPicture: 'assets/img/pokedex.png',
       links: {
-        live: '',
+        live: 'https://david-hannemann.de/Pokedex/',
         github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
