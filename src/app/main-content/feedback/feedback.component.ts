@@ -19,7 +19,7 @@ export class FeedbackComponent {
 
   texts = {
     desktop: {
-      DE: 'Ihr braucht einen Teamplayer? Das sagen meine Teammitglieder über mich',
+      DE: 'Ihr braucht einen Teamplayer? Das sagen meine Mitmenschen über mich',
       EN: 'Need a teamplayer? Here’s what my colleagues said about me',
     },
     mobileHeadline: {
