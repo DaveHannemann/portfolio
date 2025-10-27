@@ -39,7 +39,7 @@
   <div class="flexbox-mobile">
     <div class="skillset">
       <div *ngFor="let line of skillLines" class="skill-line">
-        <img *ngFor="let skill of line" [src]="skill" alt="Skill" />
+        <img *ngFor="let skill of line" [src]="skill.src" [alt]="skill.label" />
       </div>
     </div>
     <h4 class="fontJosefin">{{ texts.mobile[activeLang] }}</h4>
