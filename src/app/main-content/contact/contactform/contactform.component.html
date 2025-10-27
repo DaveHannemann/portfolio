@@ -143,12 +143,13 @@
       </div>
     </div>
     <div class="submit-button">
-      <input
-        type="submit"
-        value="Send"
-        [disabled]="!contactForm.valid || !policyClicked"
+      <button
+        type="button"
         [class.active]="contactForm.valid && policyClicked"
-      />
+        (click)="trySubmit(contactForm)"
+      >
+        Send
+      </button>
     </div>
   </form>
   <div class="feedback-overlay" *ngIf="showFeedback" [ngClass]="feedbackType">

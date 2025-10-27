@@ -78,6 +78,19 @@ export class ContactformComponent {
     },
   };
 
+  ngOnInit() {
+    const imgs = [
+      'assets/img/check_default.png',
+      'assets/img/check_hover.png',
+      'assets/img/check_ready.png',
+      'assets/img/check_error.png',
+    ];
+    imgs.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }
+
   isMobile = window.innerWidth <= 768;
 
   @HostListener('window:resize')
@@ -128,7 +141,7 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } 
+    }
     // else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
     //   ngForm.resetForm();
     //   this.policyHover = false;
@@ -136,6 +149,17 @@ export class ContactformComponent {
     //   this.policyTouched = false;
     //   this.showFeedbackMessage('success');
     // }
+  }
+
+  trySubmit(form: NgForm) {
+    if (!form.valid || !this.policyClicked) {
+      form.controls['name']?.markAsTouched();
+      form.controls['email']?.markAsTouched();
+      form.controls['message']?.markAsTouched();
+      this.policyTouched = true;
+      return;
+    }
+    this.onSubmit(form);
   }
 
   togglePolicy() {

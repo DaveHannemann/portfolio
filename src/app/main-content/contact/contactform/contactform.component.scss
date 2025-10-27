@@ -203,7 +203,7 @@ form {
 .submit-button {
   display: flex;
   justify-content: flex-end;
-  > input {
+  > button {
     padding: 13px 30px;
     border-radius: 25px;
     opacity: 50%;
@@ -211,7 +211,7 @@ form {
     background-color: #262e34;
     border: solid 1px #f8f5ec;
   }
-  > input.active {
+  > button.active {
     color: #89bcd9;
     border: solid 1px #89bcd9;
     cursor: pointer;
@@ -277,6 +277,12 @@ textarea:focus::placeholder {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
+}
+
+button:not(.active) {
+  opacity: 0.5;
+  pointer-events: auto;
+  cursor: not-allowed;
 }
 
 @media (max-width: 940px) {
