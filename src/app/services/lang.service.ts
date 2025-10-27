@@ -6,7 +6,11 @@ import { Lang } from '../types/lang.type';
   providedIn: 'root'
 })
 export class LangService {
-  private langSubject = new BehaviorSubject<Lang>('EN');
+  private storageKey = 'activeLang';
+
+  private langSubject = new BehaviorSubject<Lang>(
+    (localStorage.getItem(this.storageKey) as Lang) || 'EN'
+  );
   lang$ = this.langSubject.asObservable();
 
   get activeLang(): Lang {
@@ -15,5 +19,6 @@ export class LangService {
 
   switchLang(lang: Lang) {
     this.langSubject.next(lang);
+    localStorage.setItem(this.storageKey, lang);
   }
 }
