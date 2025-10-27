@@ -1,6 +1,10 @@
 <section class="desktop" [@listAnimation]>
   <div
-    *ngFor="let feedback of visibleFeedback; let i = index; trackBy: trackByIndex"
+    *ngFor="
+      let feedback of visibleFeedback;
+      let i = index;
+      trackBy: trackByIndex
+    "
     class="feedback-container"
     (mouseenter)="hoverIndex = i"
     (mouseleave)="hoverIndex = null"
@@ -19,13 +23,22 @@
       <div class="feedback-header">
         <h4>{{ feedback.name }}</h4>
         <span
-          >{{ feedback.text[activeLang].class }} <span class="project"> {{ feedback.text[activeLang].project }} </span></span
+          >{{ feedback.text[activeLang].class }}
+          <span class="project">
+            {{ feedback.text[activeLang].project }}
+          </span></span
         >
       </div>
       <div class="feedback-text">
         <p>"{{ feedback.text[activeLang].message }}"</p>
       </div>
-      <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
+      <a
+        *ngIf="feedback.linkedin"
+        [href]="feedback.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Linked In Profile</a
+      >
     </div>
   </div>
 </section>
@@ -35,21 +48,27 @@
     *ngFor="let feedback of feedbackData; let i = index"
     class="feedback-container"
   >
-    <img
-      class="feedback default"
-      src="assets/img/feedback.png"
-    />
+    <img class="feedback default" src="assets/img/feedback.png" />
     <div class="fontJosefin feedback-box">
       <div class="feedback-header">
         <h4>{{ feedback.name }}</h4>
         <span
-          >{{ feedback.text[activeLang].class }} <span class="project"> {{ feedback.text[activeLang].project }} </span></span
+          >{{ feedback.text[activeLang].class }}
+          <span class="project">
+            {{ feedback.text[activeLang].project }}
+          </span></span
         >
       </div>
       <div class="feedback-text">
         <p>"{{ feedback.text[activeLang].message }}"</p>
       </div>
-      <a [href]="feedback.linkedin" target="_blank">Linked In Profile</a>
+      <a
+        *ngIf="feedback.linkedin"
+        [href]="feedback.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Linked In Profile</a
+      >
     </div>
   </div>
 </section>
