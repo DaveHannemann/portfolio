@@ -21,7 +21,8 @@ section {
   display: flex;
   justify-content: space-around;
   padding-top: 32px;
-  height: 517px;
+  padding-bottom: 32px;
+  height: auto;
   > .left-side {
     display: flex;
     flex-direction: column;

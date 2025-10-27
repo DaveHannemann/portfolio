@@ -20,13 +20,13 @@ export class AboutComponent {
   @Input() project!: string;
 
   projectData: any = {
-    dabubble: {
-      duration: { DE: 'TBD', EN: 'TBD' },
-      text: {
-        DE: 'Diese App ist ein Slack-Klon. Sie revolutioniert Teamkommunikation und Zusammenarbeit mit intuitiver Oberfläche, Echtzeitnachrichten und klarer Kanalstruktur.',
-        EN: 'This app is a Slack clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-      },
-    },
+    // dabubble: {
+    //   duration: { DE: 'TBD', EN: 'TBD' },
+    //   text: {
+    //     DE: 'Diese App ist ein Slack-Klon. Sie revolutioniert Teamkommunikation und Zusammenarbeit mit intuitiver Oberfläche, Echtzeitnachrichten und klarer Kanalstruktur.',
+    //     EN: 'This app is a Slack clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    //   },
+    // },
     sharkie: {
       duration: { DE: '3 Wochen', EN: '3 Weeks' },
       text: {
@@ -48,11 +48,11 @@ export class AboutComponent {
         EN: 'API-based app to display Pokémon stats, evolution chains, and species.',
       },
     },
-    ongoing: {
-      text: {
-        DE: 'Nächstes Projekt ist DA Bubble, um meinen Abschluss bei der Developer Akademie zu beenden.',
-        EN: 'Next project will be DA Bubble to finish my graduation at Developer Akademie.',
-      },
-    },
+    // ongoing: {
+    //   text: {
+    //     DE: 'Nächstes Projekt ist DA Bubble, um meinen Abschluss bei der Developer Akademie zu beenden.',
+    //     EN: 'Next project will be DA Bubble to finish my graduation at Developer Akademie.',
+    //   },
+    // },
   };
 }

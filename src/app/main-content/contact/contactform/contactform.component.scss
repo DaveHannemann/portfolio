@@ -5,7 +5,7 @@ form {
   width: 100%;
 }
 
-.container{
+.container {
   position: relative;
 }
 
@@ -22,13 +22,13 @@ form {
   position: relative;
 
   > label {
-    font-size: 14px;
+    font-size: 16px;
     color: #89bcd9;
     padding-left: 27px;
   }
 
   > .error {
-    font-size: 14px;
+    font-size: 16px;
     color: #e44c36;
     padding-left: 27px;
   }
@@ -80,12 +80,12 @@ form {
   height: 162px;
   position: relative;
   > label {
-    font-size: 14px;
+    font-size: 16px;
     color: #89bcd9;
     padding-left: 27px;
   }
   > .error {
-    font-size: 14px;
+    font-size: 16px;
     color: #e44c36;
     padding-left: 27px;
   }
@@ -132,11 +132,11 @@ form {
   gap: 8px;
   > p {
     cursor: default;
-    font-size: 14px;
+    font-size: 16px;
   }
   > a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     color: #89bcd9;
     &:hover {
       color: #f8f5ec;
@@ -226,7 +226,7 @@ form {
 .policy-text-error {
   color: #e44c36;
   position: absolute;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 16px;
   cursor: default;
 }
@@ -260,7 +260,7 @@ textarea:focus::placeholder {
   font-weight: 500;
   color: #fff;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translate(-50%, -60%);
   transition: opacity 0.3s ease, transform 0.3s ease;

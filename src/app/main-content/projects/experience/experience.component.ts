@@ -20,20 +20,20 @@ export class ExperienceComponent {
   @Input() project!: string;
 
   projectData: any = {
-    dabubble: {
-      title: {
-        DE: 'Meine Gruppenerfahrung',
-        EN: 'My group work experience',
-      },
-      text: {
-        DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
-        EN: 'This info will come after the project is finished.',
-      },
-      links: {
-        live: '',
-        github: '',
-      },
-    },
+    // dabubble: {
+    //   title: {
+    //     DE: 'Meine Gruppenerfahrung',
+    //     EN: 'My group work experience',
+    //   },
+    //   text: {
+    //     DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
+    //     EN: 'This info will come after the project is finished.',
+    //   },
+    //   links: {
+    //     live: '',
+    //     github: '',
+    //   },
+    // },
     sharkie: {
       title: {
         DE: 'Was ich gelernt habe',

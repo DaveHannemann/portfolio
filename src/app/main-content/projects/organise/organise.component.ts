@@ -20,12 +20,12 @@ export class OrganiseComponent {
   @Input() project!: string;
 
   projectData: any = {
-    dabubble: {
-      text: {
-        DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
-        EN: 'This info will come after the project is finished.',
-      },
-    },
+    // dabubble: {
+    //   text: {
+    //     DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
+    //     EN: 'This info will come after the project is finished.',
+    //   },
+    // },
     sharkie: {
       text: {
         DE: 'Zuerst habe ich eine Mini-Karte gezeichnet, um mir zu visualisieren, was benötigt wird. Dann habe ich das Projekt in viele Klassen aufgeteilt, um den Code sauber und organisiert zu halten. Tests waren schwierig wegen des Gleichgewichts zwischen schwer und leicht, also habe ich einige Kollegen und meine Neffen einbezogen.',

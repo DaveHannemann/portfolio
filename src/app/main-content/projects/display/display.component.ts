@@ -19,26 +19,26 @@ export class DisplayComponent {
   }
 
   projectData: any = {
-    dabubble: {
-      headline: 'DA Bubble',
-      technologie: {
-        DE: 'Angular, TypeScript, Firebase',
-        EN: 'Angular, TypeScript, Firebase',
-      },
-      tech: { DE: 'Technologien', EN: 'Technologies' },
-      time: { DE: 'Dauer', EN: 'Duration' },
-      duration: { DE: 'TBD', EN: 'TBD' },
-      images: [
-        'assets/img/angular_learn.png',
-        'assets/img/typescript_learn.png',
-        'assets/img/firebase_learn.png',
-      ],
-      projectPicture: 'assets/img/dabubble.jpg',
-      links: {
-        live: '',
-        github: '',
-      },
-    },
+    // dabubble: {
+    //   headline: 'DA Bubble',
+    //   technologie: {
+    //     DE: 'Angular, TypeScript, Firebase',
+    //     EN: 'Angular, TypeScript, Firebase',
+    //   },
+    //   tech: { DE: 'Technologien', EN: 'Technologies' },
+    //   time: { DE: 'Dauer', EN: 'Duration' },
+    //   duration: { DE: 'TBD', EN: 'TBD' },
+    //   images: [
+    //     'assets/img/angular_learn.png',
+    //     'assets/img/typescript_learn.png',
+    //     'assets/img/firebase_learn.png',
+    //   ],
+    //   projectPicture: 'assets/img/dabubble.jpg',
+    //   links: {
+    //     live: '',
+    //     github: '',
+    //   },
+    // },
     sharkie: {
       headline: 'Sharkie',
       technologie: {
@@ -100,20 +100,20 @@ export class DisplayComponent {
         github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
-    ongoing: {
-      headline: { DE: 'Aktuelles Project', EN: 'Ongoing Project' },
-      technologie: {
-        DE: 'Angular, TypeScript, Firebase',
-        EN: 'Angular, TypeScript, Firebase',
-      },
-      tech: { DE: 'Technologien', EN: 'Technologies' },
-      time: { DE: 'Dauer', EN: 'Duration' },
-      images: [
-        'assets/img/angular_learn.png',
-        'assets/img/typescript_learn.png',
-        'assets/img/firebase_learn.png',
-      ],
-      projectPicture: 'assets/img/soon.jpg',
-    },
+    // ongoing: {
+    //   headline: { DE: 'Aktuelles Project', EN: 'Ongoing Project' },
+    //   technologie: {
+    //     DE: 'Angular, TypeScript, Firebase',
+    //     EN: 'Angular, TypeScript, Firebase',
+    //   },
+    //   tech: { DE: 'Technologien', EN: 'Technologies' },
+    //   time: { DE: 'Dauer', EN: 'Duration' },
+    //   images: [
+    //     'assets/img/angular_learn.png',
+    //     'assets/img/typescript_learn.png',
+    //     'assets/img/firebase_learn.png',
+    //   ],
+    //   projectPicture: 'assets/img/soon.jpg',
+    // },
   };
 }

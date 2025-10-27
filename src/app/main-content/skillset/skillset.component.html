@@ -3,7 +3,10 @@
   <div class="flexbox">
     <div class="skillset">
       <div *ngFor="let column of skillColumns" class="skill-row">
-        <img *ngFor="let skill of column" [src]="skill" alt="Skill" />
+        <div *ngFor="let skill of column" class="skill-item">
+          <img [src]="skill.src" [alt]="skill.label" />
+          <span class="skill-label fontJosefin">{{ skill.label }}</span>
+        </div>
       </div>
     </div>
     <div
@@ -35,7 +38,7 @@
 
   <div class="flexbox-mobile">
     <div class="skillset">
-      <div *ngFor="let line of skillLinesMobile" class="skill-line">
+      <div *ngFor="let line of skillLines" class="skill-line">
         <img *ngFor="let skill of line" [src]="skill" alt="Skill" />
       </div>
     </div>
