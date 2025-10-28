@@ -96,6 +96,14 @@
   }
 }
 
+.m-elements li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+}
+
 @media (max-width: 1200px) {
   .desktop {
     > div {
@@ -139,6 +147,42 @@
   .policy-box {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .desktop {
+    > div {
+      > h1 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .policy-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-right: 150px;
+    gap: 24px;
+    padding-bottom: 124px;
+    > h2 {
+      color: #89bcd9;
+      font-size: 24px;
+      font-weight: 700;
+      padding-bottom: 16px;
+    }
+    > h3 {
+      color: #89bcd9;
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 16px;
+    }
+    > h4 {
+      color: #89bcd9;
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
 }
 
