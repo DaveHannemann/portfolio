@@ -8,22 +8,22 @@
     <nav>
       <a
         (click)="scrollTo('why-me')"
-        [class.active]="activeSection === 'why-me'"
+        [class.active]="isMainPage && activeSection === 'why-me'"
         >{{ texts.why[activeLang] }}</a
       >
       <a
         (click)="scrollTo('skills')"
-        [class.active]="activeSection === 'skills'"
+        [class.active]="isMainPage && activeSection === 'skills'"
         >{{ texts.skill[activeLang] }}</a
       >
       <a
         (click)="scrollTo('projects')"
-        [class.active]="activeSection === 'projects'"
+        [class.active]="isMainPage && activeSection === 'projects'"
         >{{ texts.project[activeLang] }}</a
       >
       <a
         (click)="scrollTo('contact')"
-        [class.active]="activeSection === 'contact'"
+        [class.active]="isMainPage && activeSection === 'contact'"
         >{{ texts.contact[activeLang] }}</a
       >
     </nav>

@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   @Input() headerFixed = false;
+  @Input() isMainPage = false;
   headerVisible = false;
   burgerHover = false;
   activeSection: string = '';

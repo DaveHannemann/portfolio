@@ -1,13 +1,12 @@
-
 <app-header
   class="main-header"
   [class.fixed]="headerFixed"
   [class.main-page]="isMainPage"
+  [isMainPage]="isMainPage"
 ></app-header>
-
 
 <app-landing-page *ngIf="isMainPage"></app-landing-page>
 
-<div #headerTrigger style="margin-top:-50px;"></div>
+<div #headerTrigger style="margin-top: -50px"></div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
