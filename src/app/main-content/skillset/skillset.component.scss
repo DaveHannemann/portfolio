@@ -192,6 +192,12 @@ h4 {
 }
 
 @media (max-width: 768px) {
+  section {
+    > h1 {
+      padding-top: 64px;
+    }
+  }
+
   h4 {
     display: flex;
     color: #89bcd9;

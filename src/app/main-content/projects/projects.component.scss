@@ -42,6 +42,12 @@ section {
     padding-right: 32px;
     height: auto;
   }
+
+  section {
+  > h1 {
+    padding-top: 64px;
+  }
+}
 }
 
 @media (max-width: 420px) {
