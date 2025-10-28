@@ -1,5 +1,5 @@
 <div class="container fontJosefin">
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <form (ngSubmit)="trySubmit(contactForm)" #contactForm="ngForm">
     <div class="contact-data">
       <div class="contact-data-single">
         <input
@@ -111,23 +111,15 @@
         (click)="togglePolicy()"
       >
         <img
-          *ngIf="!policyClicked && !policyHover && !policyTouched"
-          src="assets/img/check_default.png"
-          class="policy-check"
-        />
-        <img
-          *ngIf="policyHover && !policyClicked && !policyTouched"
-          src="assets/img/check_hover.png"
-          class="policy-check"
-        />
-        <img
-          *ngIf="policyClicked"
-          src="assets/img/check_ready.png"
-          class="policy-check"
-        />
-        <img
-          *ngIf="!policyClicked && policyTouched"
-          src="assets/img/check_error.png"
+          [src]="
+            policyClicked
+              ? 'assets/img/check_ready.png'
+              : policyHover && !policyTouched
+              ? 'assets/img/check_hover.png'
+              : !policyClicked && policyTouched
+              ? 'assets/img/check_error.png'
+              : 'assets/img/check_default.png'
+          "
           class="policy-check"
         />
       </div>
@@ -143,11 +135,7 @@
       </div>
     </div>
     <div class="submit-button">
-      <button
-        type="button"
-        [class.active]="contactForm.valid && policyClicked"
-        (click)="trySubmit(contactForm)"
-      >
+      <button type="submit" [class.active]="contactForm.valid && policyClicked">
         Send
       </button>
     </div>
