@@ -7,10 +7,13 @@ export class UiService {
   headerVisible$ = this.headerVisibleSource.asObservable();
 
   toggleHeader() {
-    this.headerVisibleSource.next(!this.headerVisibleSource.value);
+    const newValue = !this.headerVisibleSource.value;
+    this.setHeaderVisible(newValue);
   }
 
   setHeaderVisible(value: boolean) {
     this.headerVisibleSource.next(value);
+    document.body.classList.toggle('no-scroll', value);
+    document.documentElement.classList.toggle('no-scroll', value);
   }
 }

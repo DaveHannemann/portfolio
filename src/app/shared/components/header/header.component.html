@@ -50,9 +50,13 @@
         alt="Logo"
       />
       <span class="fontAnta name">D.Hannemann</span>
-      <span class="job"     [ngStyle]="{
-      color: headerFixed ? '#262e34' : '#89bcd9'
-    }">developer</span>
+      <span
+        class="job"
+        [ngStyle]="{
+          color: headerFixed ? '#262e34' : '#89bcd9'
+        }"
+        >developer</span
+      >
     </div>
     <div
       class="burger-container"
@@ -92,22 +96,28 @@
     </div>
   </div>
 
-  <div *ngIf="headerVisible" class="mobile-overlay">
-    <img src="/assets/img/overlay.png" alt="" />
-    <div class="burger-box fontJosefin">
-      <nav>
-        <a (click)="scrollTo('why-me')">{{ texts.why[activeLang] }}</a>
-        <a (click)="scrollTo('skills')">{{ texts.skill[activeLang] }}</a>
-        <a (click)="scrollTo('projects')">{{ texts.project[activeLang] }}</a>
-        <a (click)="scrollTo('contact-mobile')">{{ texts.contact[activeLang] }}</a>
-      </nav>
-      <div class="switch">
-        <span (click)="switchLang('DE')" [class.active]="activeLang === 'DE'"
-          >DE</span
-        >
-        <span (click)="switchLang('EN')" [class.active]="activeLang === 'EN'"
-          >EN</span
-        >
+  <div *ngIf="headerVisible" class="mobile-overlay" (click)="closeHeader()">
+    <img src="/assets/img/overlay.png" alt="Overlay" class="overlay-bg" />
+    <div class="overlay-content" (click)="$event.stopPropagation()">
+      <div class="burger-box fontJosefin">
+        <nav>
+          <a (click)="onLinkClick('why-me')">{{ texts.why[activeLang] }}</a>
+          <a (click)="onLinkClick('skills')">{{ texts.skill[activeLang] }}</a>
+          <a (click)="onLinkClick('projects')">{{
+            texts.project[activeLang]
+          }}</a>
+          <a (click)="onLinkClick('contact-mobile')">{{
+            texts.contact[activeLang]
+          }}</a>
+        </nav>
+        <div class="switch">
+          <span (click)="switchLang('DE')" [class.active]="activeLang === 'DE'"
+            >DE</span
+          >
+          <span (click)="switchLang('EN')" [class.active]="activeLang === 'EN'"
+            >EN</span
+          >
+        </div>
       </div>
     </div>
   </div>

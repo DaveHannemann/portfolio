@@ -34,7 +34,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ui.headerVisible$.subscribe((v) => (this.headerVisible = v));
+    this.ui.headerVisible$.subscribe((v) => {
+      this.headerVisible = v;
+    });
   }
 
   get activeLang(): Lang {
@@ -68,11 +70,17 @@ export class HeaderComponent implements OnInit {
     this.scrollService.scrollToSection(sectionId);
   }
 
+  closeHeader() {
+    this.ui.setHeaderVisible(false);
+  }
+
+  onLinkClick(sectionId: string) {
+    this.scrollService.scrollToSection(sectionId);
+    this.closeHeader();
+  }
+
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
-    if (this.headerVisible && window.scrollY > 60) {
-      this.ui.setHeaderVisible(false);
-    }
     const sections = ['landing', 'why-me', 'skills', 'projects', 'contact'];
     let found = false;
 
