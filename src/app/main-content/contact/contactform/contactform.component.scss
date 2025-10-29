@@ -130,6 +130,7 @@ form {
 .policy-text-container {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
   > p {
     cursor: default;
     font-size: 16px;
@@ -302,6 +303,12 @@ button:not(.active) {
   }
 }
 
+@media (max-width: 656px) {
+  .policy-text-error {
+    margin-top: 42px;
+  }
+}
+
 @media (max-width: 587px) {
   .policy-text-container {
     flex-wrap: wrap;
@@ -321,8 +328,8 @@ button:not(.active) {
   }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 452px) {
   .policy-text-error {
-    margin-top: 50px;
+    margin-top: 52px;
   }
 }

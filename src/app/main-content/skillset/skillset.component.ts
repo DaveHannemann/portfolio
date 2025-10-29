@@ -35,18 +35,18 @@ export class SkillsetComponent implements OnInit {
     button: { DE: 'Schreib mir', EN: 'Let’s talk' },
   };
 
-skills = [
-  { src: 'assets/img/angular_mobile.png', label: 'Angular' },
-  { src: 'assets/img/typescript_mobile.png', label: 'TypeScript' },
-  { src: 'assets/img/javascript_mobile.png', label: 'JavaScript' },
-  { src: 'assets/img/html_mobile.png', label: 'HTML' },
-  { src: 'assets/img/css_mobile.png', label: 'CSS' },
-  { src: 'assets/img/api_mobile.png', label: 'API' },
-  { src: 'assets/img/firebase_mobile.png', label: 'Firebase' },
-  { src: 'assets/img/git_mobile.png', label: 'Git' },
-  { src: 'assets/img/material_design_mobile.png', label: 'Material Design' },
-  { src: 'assets/img/scrum_mobile.png', label: 'Scrum' },
-];
+  skills = [
+    { src: 'assets/img/angular_mobile.png', label: 'Angular' },
+    { src: 'assets/img/typescript_mobile.png', label: 'TypeScript' },
+    { src: 'assets/img/javascript_mobile.png', label: 'JavaScript' },
+    { src: 'assets/img/html_mobile.png', label: 'HTML' },
+    { src: 'assets/img/css_mobile.png', label: 'CSS' },
+    { src: 'assets/img/api_mobile.png', label: 'API' },
+    { src: 'assets/img/firebase_mobile.png', label: 'Firebase' },
+    { src: 'assets/img/git_mobile.png', label: 'Git' },
+    { src: 'assets/img/material_design_mobile.png', label: 'Material Design' },
+    { src: 'assets/img/scrum_mobile.png', label: 'Scrum' },
+  ];
 
   learningSkills = [
     { src: 'assets/img/angular_learn.png', label: 'Angular' },
@@ -59,25 +59,22 @@ skills = [
 
   learningHover = false;
 
-skillColumns: { src: string; label: string }[][] = [];
-skillLines: { src: string; label: string }[][] = [];
+  skillColumns: { src: string; label: string }[][] = [];
+  skillLines: { src: string; label: string }[][] = [];
 
-ngOnInit() {
-  const size = 4;
-  for (let i = 0; i < this.skills.length; i += size) {
-    this.skillColumns.push(this.skills.slice(i, i + size));
-    this.skillLines.push(this.skills.slice(i, i + size));
+  ngOnInit() {
+    const size = 4;
+    for (let i = 0; i < this.skills.length; i += size) {
+      this.skillColumns.push(this.skills.slice(i, i + size));
+      this.skillLines.push(this.skills.slice(i, i + size));
+    }
   }
-}
 
   scrollTo(sectionId: string) {
     this.scrollService.scrollToSection(sectionId);
   }
 
-    ngAfterViewInit() {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+  ngAfterViewInit() {
+    AOS.refresh();
   }
 }

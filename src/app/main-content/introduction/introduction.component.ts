@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  AfterViewChecked,
+} from '@angular/core';
 import Typed from 'typed.js';
 import { CommonModule } from '@angular/common';
 import { LangService } from '../../services/lang.service';
@@ -13,7 +19,9 @@ import AOS from 'aos';
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss',
 })
-export class IntroductionComponent implements AfterViewInit {
+export class IntroductionComponent implements AfterViewInit, AfterViewChecked {
+  private aosInitialized = false;
+  private refreshTimeout: any;
   constructor(
     public langService: LangService,
     private scrollService: ScrollService
@@ -62,10 +70,19 @@ export class IntroductionComponent implements AfterViewInit {
   ngAfterViewInit() {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
+      mirror: true,
     });
 
+    this.aosInitialized = true;
     this.startCycle();
+  }
+
+  ngAfterViewChecked() {
+    if (this.aosInitialized) {
+      clearTimeout(this.refreshTimeout);
+      this.refreshTimeout = setTimeout(() => AOS.refresh(), 300);
+    }
   }
 
   startCycle() {
