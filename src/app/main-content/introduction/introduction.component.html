@@ -1,5 +1,5 @@
 <section id="why-me">
-  <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
+  <h1 data-aos="fade-right" class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   <div class="flexbox">
     <div class="writer-line">
       <img
@@ -15,7 +15,7 @@
     <div class="motivation">
       <p class="fontJosefin text-whyme" [innerHTML]="texts.passion[activeLang]">
       </p>
-      <div class="talk-box"><button (click)="scrollTo('contact')" [innerHTML]="texts.button[activeLang]"></button></div>
+      <div data-aos="fade-left" class="talk-box"><button (click)="scrollTo('contact')" [innerHTML]="texts.button[activeLang]"></button></div>
     </div>
   </div>
 </section>

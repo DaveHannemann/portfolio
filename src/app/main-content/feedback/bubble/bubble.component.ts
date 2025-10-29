@@ -43,9 +43,6 @@ export class BubbleComponent {
   }
 
   hoverIndex: number | null = null;
-  visibleFeedback: any[] = [];
-  private currentIndex = 0;
-  private intervalId?: ReturnType<typeof setInterval>;
 
   feedbackData = [
     {
@@ -101,29 +98,6 @@ export class BubbleComponent {
       },
     },
   ];
-
-  ngOnInit() {
-    this.updateVisible();
-    this.intervalId = setInterval(() => this.nextBatch(), 6000);
-  }
-
-  ngOnDestroy() {
-    clearInterval(this.intervalId);
-  }
-
-  private updateVisible() {
-    const total = this.feedbackData.length;
-    const start = this.currentIndex;
-    const end = Math.min(start + 3, total);
-    this.visibleFeedback = this.feedbackData.slice(start, end);
-  }
-
-  private nextBatch() {
-    const total = this.feedbackData.length;
-    this.currentIndex += 3;
-    if (this.currentIndex >= total) this.currentIndex = 0;
-    this.updateVisible();
-  }
 
   trackByIndex(index: number) {
     return index;

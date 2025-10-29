@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LangService } from '../../services/lang.service';
 import { Lang } from '../../types/lang.type';
 import { ScrollService } from '../../services/scroll.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-introduction',
@@ -59,6 +60,11 @@ export class IntroductionComponent implements AfterViewInit {
   pauseBeforeNext = 300;
 
   ngAfterViewInit() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
     this.startCycle();
   }
 

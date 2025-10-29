@@ -1,8 +1,17 @@
 .desktop {
-  gap: 12px;
   display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+.desktop .feedback-container {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 .mobile {
@@ -145,12 +154,6 @@ a {
   .feedback-box {
     width: 240px;
     height: 190px;
-  }
-}
-
-@media (max-width: 990px) {
-  .desktop {
-    flex-direction: column;
   }
 }
 

@@ -6,6 +6,7 @@ import { DisplayComponent } from './display/display.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { LangService } from '../../services/lang.service';
 import { Lang } from '../../types/lang.type';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-projects',
@@ -43,5 +44,12 @@ export class ProjectsComponent {
 
   onProjectSelected(key: string) {
     this.selectedProject = key;
+  }
+
+  ngAfterViewInit() {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }
 }

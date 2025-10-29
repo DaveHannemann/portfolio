@@ -1,7 +1,7 @@
 <section id="skills">
   <h1 class="fontAnta">{{ texts.headline[activeLang] }}</h1>
   <div class="flexbox">
-    <div class="skillset">
+    <div data-aos="zoom-out" class="skillset">
       <div *ngFor="let column of skillColumns" class="skill-row">
         <div *ngFor="let skill of column" class="skill-item">
           <img [src]="skill.src" [alt]="skill.label" />
@@ -10,6 +10,7 @@
       </div>
     </div>
     <div
+      data-aos="zoom-in"
       class="learning-container"
       (mouseenter)="learningHover = true"
       (mouseleave)="learningHover = false"

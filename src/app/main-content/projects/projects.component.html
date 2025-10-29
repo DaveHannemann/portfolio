@@ -6,7 +6,12 @@
       (projectSelected)="onProjectSelected($event)"
       [activeProject]="selectedProject"
     ></app-menubar>
-    <div class="flexbox-projects">
+    <div
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      class="flexbox-projects"
+    >
       <div class="left-side">
         <app-about [project]="selectedProject"></app-about>
         <app-organise [project]="selectedProject"></app-organise>
