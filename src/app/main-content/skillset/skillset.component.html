@@ -38,13 +38,13 @@
   </div>
 
   <div class="flexbox-mobile">
-    <div class="skillset">
+    <div data-aos="zoom-out" class="skillset">
       <div *ngFor="let line of skillLines" class="skill-line">
         <img *ngFor="let skill of line" [src]="skill.src" [alt]="skill.label" />
       </div>
     </div>
     <h4 class="fontJosefin">{{ texts.mobile[activeLang] }}</h4>
-    <div class="learning-container">
+    <div data-aos="zoom-in" class="learning-container">
       <img
         class="learning default"
         src="assets/img/learning_bubble_mobile.png"
@@ -61,7 +61,11 @@
     </div>
   </div>
 
-  <button (click)="scrollTo('contact-mobile')" class="mobile-talk fontJosefin">
+  <button
+    data-aos="fade-left"
+    (click)="scrollTo('contact-mobile')"
+    class="mobile-talk fontJosefin"
+  >
     {{ texts.button[activeLang] }}
   </button>
 </section>
