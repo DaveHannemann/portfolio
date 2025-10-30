@@ -22,7 +22,7 @@
 
   > .portrait-bg {
     rotate: 315deg;
-    width: 580px;
+    width: 638px;
     height: 616px;
     display: block;
     position: relative;
@@ -50,7 +50,7 @@
   > .portrait {
     position: absolute;
     top: -29px;
-    left: -100px;
+    left: -56px;
     z-index: 3;
   }
 }
@@ -205,7 +205,7 @@
 
   .portrait-container {
     > .portrait-bg {
-      width: 500px;
+      width: 600px;
       height: 536px;
     }
 
@@ -216,7 +216,20 @@
   }
 }
 
-@media (max-width: 1016px) {
+@media (max-width: 1108px) {
+  .portrait-container {
+    > .portrait-bg {
+      width: 548px;
+      height: 536px;
+    }
+
+    > .portrait {
+      height: 550px;
+      width: 650px;
+      top: -15px;
+    }
+  }
+
   .headline {
     > h1 {
       font-size: 60px;
@@ -233,16 +246,18 @@
   }
 }
 
-@media (max-width: 870px) {
+@media (max-width: 905px) {
   .portrait-container {
     > .portrait-bg {
-      width: 400px;
+      width: 440px;
       height: 420px;
     }
 
     > .portrait {
-      height: 480px;
-      top: -61px;
+      height: 437px;
+      top: -18px;
+      width: 500px;
+      left: -30px;
     }
   }
 
@@ -252,6 +267,18 @@
 
   .headline {
     padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 793px) {
+  .headline {
+    > h1 {
+      font-size: 54px;
+    }
+
+    > h3 {
+      font-size: 28px;
+    }
   }
 }
 
@@ -266,6 +293,16 @@
     align-items: center;
     gap: 50px;
     padding-top: 200px;
+  }
+
+    .headline {
+    > h1 {
+      font-size: 60px;
+    }
+
+    > h3 {
+      font-size: 32px;
+    }
   }
 
   .mobile-me {
