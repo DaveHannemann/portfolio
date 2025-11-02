@@ -49,12 +49,8 @@ export class SkillsetComponent implements OnInit {
   ];
 
   learningSkills = [
-    { src: 'assets/img/angular_learn.png', label: 'Angular' },
-    { src: 'assets/img/typescript_learn.png', label: 'TypeScript' },
-    { src: 'assets/img/javascript_learn.png', label: 'JavaScript' },
-    { src: 'assets/img/html_learn.png', label: 'HTML' },
-    { src: 'assets/img/css_learn.png', label: 'CSS' },
-    { src: 'assets/img/firebase_learn.png', label: 'Firebase' },
+    { src: 'assets/img/n8n.png', label: 'n8n' },
+    { src: 'assets/img/docker.png', label: 'Docker' },
   ];
 
   learningHover = false;
