@@ -65,6 +65,10 @@ export class ContactformComponent {
       DE: 'Bitte akzeptieren Sie den Datenschutz.',
       EN: 'Please accept the privacy policy.',
     },
+    button: {
+      DE: 'Senden',
+      EN: 'Send',
+    },
   };
 
   feedbackTexts = {
