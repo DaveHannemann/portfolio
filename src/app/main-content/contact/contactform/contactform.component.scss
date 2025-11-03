@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -131,6 +137,7 @@ form {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  justify-content: flex-start;
   > p {
     cursor: default;
     font-size: 16px;
@@ -311,7 +318,6 @@ button:not(.active) {
 
 @media (max-width: 587px) {
   .policy-text-container {
-    flex-wrap: wrap;
     gap: 4px;
   }
 }

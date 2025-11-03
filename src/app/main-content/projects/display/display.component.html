@@ -1,6 +1,6 @@
 <section class="fontJosefin" *ngIf="projectData[project]">
   <div class="tech">
-    <h2 class="headline-mobile">{{ projectData[project].headline[activeLang] }}</h2>
+    <h2 class="headline-mobile fontJosefin">{{ projectData[project].headline }}</h2>
     <h4>{{ projectData[project].tech[activeLang] }}</h4>
     <div class="icons">
       <img *ngFor="let img of projectData[project].images" [src]="img" alt="" />
