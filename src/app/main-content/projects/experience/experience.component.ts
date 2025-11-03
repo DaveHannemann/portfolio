@@ -44,8 +44,8 @@ export class ExperienceComponent {
         EN: 'A special project for me, because I had to learn a lot of new things. I learned how to handle the canvas, create classes and objects, animate them, handle collisions, and build a game loop.',
       },
       links: {
-        live: '',
-        github: '',
+        live: 'https://david-hannemann.de/Sharkie',
+        github: 'https://github.com/DaveHannemann/Sharkie',
       },
     },
     join: {
@@ -58,8 +58,8 @@ export class ExperienceComponent {
         EN: 'We were a group of 3. My role was first to create the main structure of the board, then I took care of the summary page, and after that, we came together to finish the board and contacts main process. It was smooth teamwork with a lot of fun and mutual help.',
       },
       links: {
-        live: '',
-        github: '',
+        live: 'https://david-hannemann.de/JoinBoard',
+        github: 'https://github.com/DaveHannemann/JoinBoard',
       },
     },
     pokedex: {
@@ -72,8 +72,8 @@ export class ExperienceComponent {
         EN: 'As the first app using an API, it took me some time to evaluate what’s needed and what’s not. I learned how to handle APIs, display data, and made my first steps with CSS animations.',
       },
       links: {
-        live: '',
-        github: '',
+        live: 'https://david-hannemann.de/Pokedex',
+        github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
   };

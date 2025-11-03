@@ -96,7 +96,7 @@ export class DisplayComponent {
       ],
       projectPicture: 'assets/img/pokedex.png',
       links: {
-        live: 'https://david-hannemann.de/Pokedex/',
+        live: 'https://david-hannemann.de/Pokedex',
         github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
