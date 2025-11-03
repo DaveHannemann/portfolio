@@ -1,6 +1,8 @@
 <section class="fontJosefin" *ngIf="projectData[project]">
   <div class="tech">
-    <h2 class="headline-mobile fontJosefin">{{ projectData[project].headline }}</h2>
+    <h2 class="headline-mobile fontJosefin">
+      {{ projectData[project].headline }}
+    </h2>
     <h4>{{ projectData[project].tech[activeLang] }}</h4>
     <div class="icons">
       <img *ngFor="let img of projectData[project].images" [src]="img" alt="" />
@@ -15,11 +17,17 @@
     >
   </div>
   <div class="picture-box">
-    <img
-      class="project-picture"
-      [src]="projectData[project].projectPicture"
-      alt=""
-    />
+    <a
+      [href]="projectData[project].links.live"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        class="project-picture"
+        [src]="projectData[project].projectPicture"
+        alt="{{ projectData[project].headline }}"
+      />
+    </a>
   </div>
   <div class="project-buttons" *ngIf="projectData[project].links">
     <a class="live" [href]="projectData[project].links.live" target="_blank"
