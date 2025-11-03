@@ -138,6 +138,7 @@ form {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  min-width: 0;
   > p {
     cursor: default;
     font-size: 16px;
