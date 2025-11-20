@@ -46,14 +46,14 @@ export class BubbleComponent {
 
   feedbackData = [
     {
-      name: 'Gustav G.',
-      linkedin: '',
+      name: 'Philipp Gross',
+      linkedin: 'https://www.linkedin.com/in/philipp-gross-a34533111/',
       text: {
-        EN: { class: 'Project', project: 'Join', message: 'Amazing work!' },
+        EN: { class: 'Friend', project: 'Football', message: 'Dave is extremely reliable and meticulous. His good mood is contagious, and it’s a lot of fun to work with him!' },
         DE: {
-          class: 'Projekt',
-          project: 'Join',
-          message: 'Großartige Arbeit!',
+          class: 'Freund',
+          project: 'ehm. Mitspieler',
+          message: 'Dave ist überaus verlässlich und sorgfältig. Seine gute Laune steckt immer an und es macht extrem viel Spaß mit ihm zusammen zu arbeiten!',
         },
       },
     },
