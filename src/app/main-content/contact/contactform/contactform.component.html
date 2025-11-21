@@ -126,10 +126,18 @@
       <div class="policy-text-container">
         <p>
           {{ texts.policyPre[activeLang] }}
+
+          <a routerLink="/policy">{{ texts.policy[activeLang] }}</a>
+          {{ texts.policySuf[activeLang] }}
         </p>
-        <a routerLink="/policy">{{ texts.policy[activeLang] }}</a>
-        <p>{{ texts.policySuf[activeLang] }}</p>
-        <p *ngIf="!policyClicked && policyTouched" class="policy-text-error">
+        <p
+          *ngIf="!policyClicked && policyTouched"
+          class="policy-text-error"
+          [ngClass]="{
+            'policy-text-error-de': activeLang === 'DE',
+            'policy-text-error-en': activeLang === 'EN'
+          }"
+        >
           {{ texts.policyError[activeLang] }}
         </p>
       </div>

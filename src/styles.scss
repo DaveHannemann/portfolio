@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body{
+  overflow-x: clip;
+}
+
 html.no-scroll,
 body.no-scroll {
   overflow: hidden !important;

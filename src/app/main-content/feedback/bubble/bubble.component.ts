@@ -57,46 +57,46 @@ export class BubbleComponent {
         },
       },
     },
-    {
-      name: 'Donald D.',
-      linkedin: '',
-      text: {
-        EN: { class: 'Project', project: 'Pokédex', message: 'Just wow!' },
-        DE: { class: 'Projekt', project: 'Pokédex', message: 'Einfach wow!' },
-      },
-    },
-    {
-      name: 'Peter P.',
-      linkedin: '',
-      text: {
-        EN: {
-          class: 'Teammate',
-          project: 'Football',
-          message: 'Clean code structure and smart logic.',
-        },
-        DE: {
-          class: 'Teamkollege',
-          project: 'Fußball',
-          message: 'Saubere Code-Struktur und clevere Logik.',
-        },
-      },
-    },
-    {
-      name: 'Tony S.',
-      linkedin: '',
-      text: {
-        EN: {
-          class: 'Project',
-          project: 'Portfolio',
-          message: 'Very elegant UI.',
-        },
-        DE: {
-          class: 'Projekt',
-          project: 'Portfolio',
-          message: 'Sehr elegante UI.',
-        },
-      },
-    },
+    // {
+    //   name: 'Donald D.',
+    //   linkedin: '',
+    //   text: {
+    //     EN: { class: 'Project', project: 'Pokédex', message: 'Just wow!' },
+    //     DE: { class: 'Projekt', project: 'Pokédex', message: 'Einfach wow!' },
+    //   },
+    // },
+    // {
+    //   name: 'Peter P.',
+    //   linkedin: '',
+    //   text: {
+    //     EN: {
+    //       class: 'Teammate',
+    //       project: 'Football',
+    //       message: 'Clean code structure and smart logic.',
+    //     },
+    //     DE: {
+    //       class: 'Teamkollege',
+    //       project: 'Fußball',
+    //       message: 'Saubere Code-Struktur und clevere Logik.',
+    //     },
+    //   },
+    // },
+    // {
+    //   name: 'Tony S.',
+    //   linkedin: '',
+    //   text: {
+    //     EN: {
+    //       class: 'Project',
+    //       project: 'Portfolio',
+    //       message: 'Very elegant UI.',
+    //     },
+    //     DE: {
+    //       class: 'Projekt',
+    //       project: 'Portfolio',
+    //       message: 'Sehr elegante UI.',
+    //     },
+    //   },
+    // },
   ];
 
   trackByIndex(index: number) {

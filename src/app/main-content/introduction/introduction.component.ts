@@ -34,7 +34,7 @@ export class IntroductionComponent implements AfterViewInit, AfterViewChecked {
   texts = {
     headline: { DE: 'Warum ich', EN: 'Why me' },
     passion: {
-      DE: 'Ich habe meine Leidenschaft fürs Programmieren neu entdeckt, weil es eine perfekte Mischung aus analytischem Denken, Kreativität und meinem Motto "Trial and Error" bietet. <br> Jedes Projekt bringt neue Herausforderungen mit sich. <br> Sei es das eigenständige Lösen hartnäckiger Problem, das Ausprobieren und Verbessern von Ansätzen, oder die Zusammenarbeit im Team, bei der Ideen, Kritik und Feedback aufeinandertreffen. <br> Genau diese Vielfalt macht das Programmieren für mich so spannend und interessant.',
+      DE: 'Ich habe meine Leidenschaft fürs Programmieren entdeckt, weil es eine perfekte Mischung aus analytischem Denken, Kreativität und meinem Motto "Trial and Error" bietet. <br> Jedes Projekt bringt neue Herausforderungen mit sich. <br> Sei es das eigenständige Lösen hartnäckiger Problem, das Ausprobieren und Verbessern von Ansätzen, oder die Zusammenarbeit im Team, bei der Ideen, Kritik und Feedback aufeinandertreffen. <br> Genau diese Vielfalt macht das Programmieren für mich so spannend und interessant.',
       EN: 'I rediscovered my passion for programming because it offers a perfect mix of analytical thinking, creativity, and my motto "Trial and Error". <br> Every project brings new challenges. <br> Whether it’s independently solving stubborn problems, experimenting and improving approaches, or collaborating in a team where ideas, criticism, and feedback intersect. <br> It’s exactly this variety that makes programming so exciting and engaging for me.',
     },
     button: { DE: 'Schreib mir', EN: 'Let’s talk' },

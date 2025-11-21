@@ -142,19 +142,22 @@ form {
   > p {
     cursor: default;
     font-size: 16px;
-  }
-  > a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #89bcd9;
-    &:hover {
-      color: #f8f5ec;
+    > a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #89bcd9;
+      &:hover {
+        color: #f8f5ec;
+      }
     }
   }
 }
 
 .policy-box {
   position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0; 
   > .policy-check {
     display: block;
     position: relative;
@@ -232,7 +235,15 @@ form {
   border: solid 1px #e44c36 !important;
 }
 
-.policy-text-error {
+.policy-text-error-en {
+  color: #e44c36;
+  position: absolute;
+  font-size: 16px;
+  margin-top: 16px;
+  cursor: default;
+}
+
+.policy-text-error-de {
   color: #e44c36;
   position: absolute;
   font-size: 16px;
@@ -304,6 +315,12 @@ button:not(.active) {
   }
 }
 
+@media (max-width: 861px) {
+  .policy-text-error-de {
+    margin-top: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   input::placeholder,
   textarea::placeholder {
@@ -311,9 +328,9 @@ button:not(.active) {
   }
 }
 
-@media (max-width: 656px) {
-  .policy-text-error {
-    margin-top: 42px;
+@media (max-width: 636px) {
+  .policy-text-error-en {
+    margin-top: 32px;
   }
 }
 
@@ -324,7 +341,7 @@ button:not(.active) {
 }
 
 @media (max-width: 578px) {
-  .policy-text-error {
+  .policy-text-error-de {
     margin-top: 36px;
   }
 }
@@ -335,8 +352,20 @@ button:not(.active) {
   }
 }
 
+@media (max-width: 477px) {
+  .policy-text-error-de {
+    margin-top: 48px;
+  }
+}
+
 @media (max-width: 452px) {
   .policy-text-error {
     margin-top: 52px;
+  }
+}
+
+@media (max-width: 351px) {
+  .policy-text-error-de {
+    margin-top: 64px;
   }
 }
