@@ -46,11 +46,12 @@ export class SkillsetComponent implements OnInit {
     { src: 'assets/img/git_mobile.png', label: 'Git' },
     { src: 'assets/img/material_design_mobile.png', label: 'Material Design' },
     { src: 'assets/img/scrum_mobile.png', label: 'Scrum' },
+    { src: 'assets/img/n8n.png', label: 'n8n' },
   ];
 
   learningSkills = [
-    { src: 'assets/img/n8n.png', label: 'n8n' },
-    { src: 'assets/img/docker.png', label: 'Docker' },
+    { src: 'assets/img/vue.png', label: 'Vue.js' },
+    { src: 'assets/img/react.png', label: 'React' },
   ];
 
   learningHover = false;
