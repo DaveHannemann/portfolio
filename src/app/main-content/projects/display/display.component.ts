@@ -62,8 +62,8 @@ export class DisplayComponent {
     join: {
       headline: 'Join',
       technologie: {
-        DE: 'HTML, CSS, JavaScript',
-        EN: 'HTML, CSS, JavaScript',
+        DE: 'HTML, CSS, JavaScript, Firebase',
+        EN: 'HTML, CSS, JavaScript, Firebase',
       },
       tech: { DE: 'Technologien', EN: 'Technologies' },
       time: { DE: 'Dauer', EN: 'Duration' },
@@ -72,6 +72,7 @@ export class DisplayComponent {
         'assets/img/html_learn.png',
         'assets/img/javascript_learn.png',
         'assets/img/css_learn.png',
+        'assets/img/firebase_learn.png',
       ],
       projectPicture: 'assets/img/join.png',
       links: {
