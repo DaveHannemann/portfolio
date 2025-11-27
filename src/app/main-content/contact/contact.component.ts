@@ -5,11 +5,10 @@ import { LangService } from '../../services/lang.service';
 import { ScrollService } from '../../services/scroll.service';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [ContactformComponent],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+    selector: 'app-contact',
+    imports: [ContactformComponent],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   constructor(

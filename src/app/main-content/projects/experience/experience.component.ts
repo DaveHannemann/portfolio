@@ -4,11 +4,10 @@ import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss',
+    selector: 'app-experience',
+    imports: [CommonModule],
+    templateUrl: './experience.component.html',
+    styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent {
   constructor(public langService: LangService) {}

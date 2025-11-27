@@ -7,11 +7,10 @@ import { LangService } from '../../../services/lang.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-contactform',
-  standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
-  templateUrl: './contactform.component.html',
-  styleUrl: './contactform.component.scss',
+    selector: 'app-contactform',
+    imports: [CommonModule, FormsModule, RouterModule],
+    templateUrl: './contactform.component.html',
+    styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
   constructor(public langService: LangService) {}

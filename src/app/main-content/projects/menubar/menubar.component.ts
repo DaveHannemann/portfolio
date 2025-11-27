@@ -6,11 +6,10 @@ import { Lang } from '../../../types/lang.type';
 type ProjectName = { key: string; DE: string; EN: string };
 
 @Component({
-  selector: 'app-menubar',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './menubar.component.html',
-  styleUrl: './menubar.component.scss',
+    selector: 'app-menubar',
+    imports: [CommonModule],
+    templateUrl: './menubar.component.html',
+    styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
   constructor(public langService: LangService) {}

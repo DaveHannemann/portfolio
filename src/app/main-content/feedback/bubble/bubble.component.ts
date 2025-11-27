@@ -12,28 +12,23 @@ import { Lang } from '../../../types/lang.type';
 import { LangService } from '../../../services/lang.service';
 
 @Component({
-  selector: 'app-bubble',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './bubble.component.html',
-  styleUrl: './bubble.component.scss',
-  animations: [
-    trigger('listAnimation', [
-      transition('* => *', [
-        query(':leave', [animate('400ms ease-in-out', style({ opacity: 0 }))], {
-          optional: true,
-        }),
-        query(
-          ':enter',
-          [
-            style({ opacity: 0 }),
-            animate('400ms 200ms ease-in-out', style({ opacity: 1 })),
-          ],
-          { optional: true }
-        ),
-      ]),
-    ]),
-  ],
+    selector: 'app-bubble',
+    imports: [CommonModule],
+    templateUrl: './bubble.component.html',
+    styleUrl: './bubble.component.scss',
+    animations: [
+        trigger('listAnimation', [
+            transition('* => *', [
+                query(':leave', [animate('400ms ease-in-out', style({ opacity: 0 }))], {
+                    optional: true,
+                }),
+                query(':enter', [
+                    style({ opacity: 0 }),
+                    animate('400ms 200ms ease-in-out', style({ opacity: 1 })),
+                ], { optional: true }),
+            ]),
+        ]),
+    ]
 })
 export class BubbleComponent {
   constructor(public langService: LangService) {}

@@ -4,11 +4,10 @@ import { Lang } from '../../types/lang.type';
 import { LangService } from '../../services/lang.service';
 
 @Component({
-  selector: 'app-feedback',
-  standalone: true,
-  imports: [BubbleComponent],
-  templateUrl: './feedback.component.html',
-  styleUrl: './feedback.component.scss',
+    selector: 'app-feedback',
+    imports: [BubbleComponent],
+    templateUrl: './feedback.component.html',
+    styleUrl: './feedback.component.scss'
 })
 export class FeedbackComponent {
   constructor(public langService: LangService) {}

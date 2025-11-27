@@ -6,11 +6,10 @@ import { LangService } from '../../../services/lang.service';
 import { link } from 'fs';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+    selector: 'app-footer',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   constructor(public langService: LangService) {}

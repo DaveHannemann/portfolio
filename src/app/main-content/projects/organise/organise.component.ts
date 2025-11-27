@@ -4,11 +4,10 @@ import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 
 @Component({
-  selector: 'app-organise',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './organise.component.html',
-  styleUrl: './organise.component.scss',
+    selector: 'app-organise',
+    imports: [CommonModule],
+    templateUrl: './organise.component.html',
+    styleUrl: './organise.component.scss'
 })
 export class OrganiseComponent {
   constructor(public langService: LangService) {}

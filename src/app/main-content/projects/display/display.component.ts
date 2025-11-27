@@ -4,11 +4,10 @@ import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 
 @Component({
-  selector: 'app-display',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './display.component.html',
-  styleUrl: './display.component.scss',
+    selector: 'app-display',
+    imports: [CommonModule],
+    templateUrl: './display.component.html',
+    styleUrl: './display.component.scss'
 })
 export class DisplayComponent {
   constructor(public langService: LangService) {}

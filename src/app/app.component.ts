@@ -7,17 +7,16 @@ import { LandingPageComponent } from './main-content/landing-page/landing-page.c
 import { debounceTime, fromEvent } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    FooterComponent,
-    HeaderComponent,
-    LandingPageComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        FooterComponent,
+        HeaderComponent,
+        LandingPageComponent,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   @ViewChild('headerTrigger') headerTrigger!: ElementRef;

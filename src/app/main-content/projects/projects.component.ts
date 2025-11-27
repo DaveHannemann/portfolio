@@ -9,17 +9,16 @@ import { Lang } from '../../types/lang.type';
 import AOS from 'aos';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [
-    AboutComponent,
-    OrganiseComponent,
-    ExperienceComponent,
-    DisplayComponent,
-    MenubarComponent,
-  ],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
+    selector: 'app-projects',
+    imports: [
+        AboutComponent,
+        OrganiseComponent,
+        ExperienceComponent,
+        DisplayComponent,
+        MenubarComponent,
+    ],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   constructor(public langService: LangService) {}

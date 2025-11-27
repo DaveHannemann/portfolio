@@ -6,11 +6,10 @@ import { LangService } from '../services/lang.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-privacy-policy',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+    selector: 'app-privacy-policy',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './privacy-policy.component.html',
+    styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
   constructor(public langService: LangService, private location: Location) {}

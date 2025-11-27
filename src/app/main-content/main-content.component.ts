@@ -6,11 +6,10 @@ import { FeedbackComponent } from "./feedback/feedback.component";
 import { ContactComponent } from "./contact/contact.component";
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [IntroductionComponent, SkillsetComponent, ProjectsComponent, FeedbackComponent, ContactComponent],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+    selector: 'app-main-content',
+    imports: [IntroductionComponent, SkillsetComponent, ProjectsComponent, FeedbackComponent, ContactComponent],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
 

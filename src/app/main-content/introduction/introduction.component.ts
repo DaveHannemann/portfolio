@@ -13,11 +13,10 @@ import { ScrollService } from '../../services/scroll.service';
 import AOS from 'aos';
 
 @Component({
-  selector: 'app-introduction',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './introduction.component.html',
-  styleUrl: './introduction.component.scss',
+    selector: 'app-introduction',
+    imports: [CommonModule],
+    templateUrl: './introduction.component.html',
+    styleUrl: './introduction.component.scss'
 })
 export class IntroductionComponent implements AfterViewInit, AfterViewChecked {
   private aosInitialized = false;

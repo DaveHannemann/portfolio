@@ -5,11 +5,10 @@ import { LangService } from '../services/lang.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-legal-notice',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss',
+    selector: 'app-legal-notice',
+    imports: [RouterModule],
+    templateUrl: './legal-notice.component.html',
+    styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent {
   constructor(public langService: LangService, private location: Location) {}

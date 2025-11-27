@@ -6,11 +6,10 @@ import { ScrollService } from '../../services/scroll.service';
 import AOS from 'aos';
 
 @Component({
-  selector: 'app-skillset',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './skillset.component.html',
-  styleUrl: './skillset.component.scss',
+    selector: 'app-skillset',
+    imports: [CommonModule],
+    templateUrl: './skillset.component.html',
+    styleUrl: './skillset.component.scss'
 })
 export class SkillsetComponent implements OnInit {
   constructor(
