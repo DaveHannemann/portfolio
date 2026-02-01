@@ -77,7 +77,7 @@
       color: #f8f5ec;
     }
     > span {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 400;
       color: #f8f5ec;
       > .project {
@@ -90,6 +90,7 @@
 .feedback-text {
   width: 292px;
   height: 121px;
+  display: contents;
   > p {
     font-size: 18px;
     color: #f8f5ec;
@@ -132,29 +133,6 @@ a {
     left: 25px;
     width: 300px;
     height: 250px;
-  }
-}
-@media (max-width: 1165px) {
-  .feedback-container {
-    width: 310px;
-    height: 310px;
-  }
-
-  .feedback-box {
-    width: 260px;
-    height: 210px;
-  }
-}
-
-@media (max-width: 1055px) {
-  .feedback-container {
-    width: 290px;
-    height: 290px;
-  }
-
-  .feedback-box {
-    width: 240px;
-    height: 190px;
   }
 }
 

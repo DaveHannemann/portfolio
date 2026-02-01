@@ -32,7 +32,7 @@ export class ProjectsComponent {
   };
 
   projects = [
-    // { key: 'dabubble', DE: 'DA Bubble', EN: 'DA Bubble' },
+    { key: 'dabubble', DE: 'DA Bubble', EN: 'DA Bubble' },
     { key: 'sharkie', DE: 'Sharkie', EN: 'Sharkie' },
     { key: 'join', DE: 'Join', EN: 'Join' },
     { key: 'pokedex', DE: 'Pokédex', EN: 'Pokédex' },

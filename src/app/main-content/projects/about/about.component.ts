@@ -19,13 +19,13 @@ export class AboutComponent {
   @Input() project!: string;
 
   projectData: any = {
-    // dabubble: {
-    //   duration: { DE: 'TBD', EN: 'TBD' },
-    //   text: {
-    //     DE: 'Diese App ist ein Slack-Klon. Sie revolutioniert Teamkommunikation und Zusammenarbeit mit intuitiver Oberfläche, Echtzeitnachrichten und klarer Kanalstruktur.',
-    //     EN: 'This app is a Slack clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-    //   },
-    // },
+    dabubble: {
+      duration: { DE: '2 Monate', EN: '2 Months' },
+      text: {
+        DE: 'Diese App ist ein Slack-Klon. Sie revolutioniert Teamkommunikation und Zusammenarbeit mit intuitiver Oberfläche, Echtzeitnachrichten und klarer Kanalstruktur.',
+        EN: 'This app is a Slack clone. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+      },
+    },
     sharkie: {
       duration: { DE: '3 Wochen', EN: '3 Weeks' },
       text: {

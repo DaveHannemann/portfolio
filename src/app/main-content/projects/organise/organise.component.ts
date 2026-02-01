@@ -19,12 +19,12 @@ export class OrganiseComponent {
   @Input() project!: string;
 
   projectData: any = {
-    // dabubble: {
-    //   text: {
-    //     DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
-    //     EN: 'This info will come after the project is finished.',
-    //   },
-    // },
+    dabubble: {
+      text: {
+        DE: 'Wir nutzten ein Kanban-Board, um unsere Aufgaben zu organisieren. Jeder war für unterschiedliche Teile des Projekts verantwortlich, aber bei Bedarf halfen wir uns gegenseitig. Wöchentliche Meetings wurden gehalten, um Fortschritte und Probleme zu besprechen und das Board zu aktualisieren. Gelegentlich spontane Meetings, wenn es nötig war.',
+        EN: 'We used a Kanban board to organize our tasks. Everyone was responsible for different parts of the project, but we supported each other whenever needed. Weekly meetings were held to discuss progress and challenges and to update the board, with occasional spontaneous meetings when necessary.',
+      },
+    },
     sharkie: {
       text: {
         DE: 'Zuerst habe ich eine Mini-Karte gezeichnet, um mir zu visualisieren, was benötigt wird. Dann habe ich das Projekt in viele Klassen aufgeteilt, um den Code sauber und organisiert zu halten. Tests waren schwierig wegen des Gleichgewichts zwischen schwer und leicht, also habe ich einige Kollegen und meine Neffen einbezogen.',

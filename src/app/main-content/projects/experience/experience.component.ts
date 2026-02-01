@@ -4,10 +4,10 @@ import { LangService } from '../../../services/lang.service';
 import { Lang } from '../../../types/lang.type';
 
 @Component({
-    selector: 'app-experience',
-    imports: [CommonModule],
-    templateUrl: './experience.component.html',
-    styleUrl: './experience.component.scss'
+  selector: 'app-experience',
+  imports: [CommonModule],
+  templateUrl: './experience.component.html',
+  styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
   constructor(public langService: LangService) {}
@@ -19,20 +19,20 @@ export class ExperienceComponent {
   @Input() project!: string;
 
   projectData: any = {
-    // dabubble: {
-    //   title: {
-    //     DE: 'Meine Gruppenerfahrung',
-    //     EN: 'My group work experience',
-    //   },
-    //   text: {
-    //     DE: 'Diese Informationen folgen nach Abschluss des Projekts.',
-    //     EN: 'This info will come after the project is finished.',
-    //   },
-    //   links: {
-    //     live: '',
-    //     github: '',
-    //   },
-    // },
+    dabubble: {
+      title: {
+        DE: 'Meine Gruppenerfahrung',
+        EN: 'My group work experience',
+      },
+      text: {
+        DE: 'Ein schönes Projekt, dass sehr viel Spaß gemacht hat. Wir waren ein Team aus drei Leuten, haben uns erst um die Struktur Gedanken gemacht, dann hat sich jede eine Aufgabe geschnappt und so wurde die App stetig gebaut, auch Dank der offenen und verbindlichen Kommunikation im Team.',
+        EN: 'A lovely project that was a lot of fun. We were a team of three people: first we thought about the overall structure, then each of us took on a task, and step by step the app was built. Thanks in large part to the open, clear, and reliable communication within the team.',
+      },
+      links: {
+        live: 'https://david-hannemann.de/dabubble',
+        github: 'https://github.com/DaveHannemann/DABubble',
+      },
+    },
     sharkie: {
       title: {
         DE: 'Was ich gelernt habe',
