@@ -80,22 +80,22 @@ export class BubbleComponent {
         },
       },
     },
-    // {
-    //   name: 'Peter P.',
-    //   linkedin: '',
-    //   text: {
-    //     EN: {
-    //       class: 'Teammate',
-    //       project: 'Football',
-    //       message: 'Clean code structure and smart logic.',
-    //     },
-    //     DE: {
-    //       class: 'Teamkollege',
-    //       project: 'Fußball',
-    //       message: 'Saubere Code-Struktur und clevere Logik.',
-    //     },
-    //   },
-    // },
+    {
+      name: 'Tim Harig',
+      linkedin: '',
+      text: {
+        EN: {
+          class: 'Teammate',
+          project: 'Football',
+          message: 'What defines Dave on the football field, he also lives in his private life: reliability and team spirit. Through our many years of friendship, I know that I can always rely on him in any situation - something he has proven time and time again for me. In short: a true friend and a solid support for any project.',
+        },
+        DE: {
+          class: 'Teamkollege',
+          project: 'Fußball',
+          message: 'Was Dave beim Football auszeichnet, lebt er auch in seinem Privatleben: Zuverlässigkeit und Teamgeist. Durch unsere langjährige Freundschaft weiß ich, dass ich mich in jeder Situation auf ihn verlassen kann - etwas, das er mir immer wieder bewiesen hat. Kurz gesagt: ein echter Freund und eine verlässliche Stütze für jedes Projekt.',
+        },
+      },
+    },
     // {
     //   name: 'Tony S.',
     //   linkedin: '',
