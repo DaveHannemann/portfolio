@@ -47,11 +47,19 @@ export class AboutComponent {
         EN: 'API-based app to display Pokémon stats, evolution chains, and species.',
       },
     },
-    // ongoing: {
-    //   text: {
-    //     DE: 'Nächstes Projekt ist DA Bubble, um meinen Abschluss bei der Developer Akademie zu beenden.',
-    //     EN: 'Next project will be DA Bubble to finish my graduation at Developer Akademie.',
-    //   },
-    // },
+    kanmind: {
+      duration: { DE: '1 Monat', EN: '1 Month' },
+      text: {
+        DE: 'Nur Backend. Ein Kanban-ähnlicher Task-Manager zur Organisation von Projekten und Aufgaben.',
+        EN: 'Backend Only. A Kanban-style task manager for organizing projects and tasks.',
+      },
+    },
+    quizly: {
+      duration: { DE: '3 Wochen', EN: '3 Weeks' },
+      text: {
+        DE: 'Nur Backend. Ein KI generiertes Quiz-Spiel zur Testung von Wissen und Fähigkeiten.',
+        EN: 'Backend only. An AI-generated quiz game to test knowledge and skills.',
+      },
+    },
   };
 }

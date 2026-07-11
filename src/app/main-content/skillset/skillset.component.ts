@@ -6,15 +6,15 @@ import { ScrollService } from '../../services/scroll.service';
 import AOS from 'aos';
 
 @Component({
-    selector: 'app-skillset',
-    imports: [CommonModule],
-    templateUrl: './skillset.component.html',
-    styleUrl: './skillset.component.scss'
+  selector: 'app-skillset',
+  imports: [CommonModule],
+  templateUrl: './skillset.component.html',
+  styleUrl: './skillset.component.scss',
 })
 export class SkillsetComponent implements OnInit {
   constructor(
     public langService: LangService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
   ) {}
 
   get activeLang(): Lang {
@@ -46,12 +46,22 @@ export class SkillsetComponent implements OnInit {
     { src: 'assets/img/material_design_mobile.png', label: 'Material Design' },
     { src: 'assets/img/scrum_mobile.png', label: 'Scrum' },
     { src: 'assets/img/react.svg', label: 'React' },
+    { src: 'assets/img/django.png', label: 'Django' },
+    { src: 'assets/img/python.png', label: 'Python' },
+    { src: 'assets/img/docker.png', label: 'Docker' },
+    { src: 'assets/img/linux.png', label: 'Linux' },
+    { src: 'assets/img/redis.png', label: 'Redis' },
+    { src: 'assets/img/cloud.png', label: 'Cloud' },
+    { src: 'assets/img/postgresql.png', label: 'PostgreSQL' },
+    { src: 'assets/img/drf.png', label: 'Django REST Framework' },
   ];
 
   learningSkills = [
-    { src: 'assets/img/django.png', label: 'Django' },
-    { src: 'assets/img/python.png', label: 'Python' },
-    { src: 'assets/img/sql.png', label: 'SQL' },
+    { src: 'assets/img/cicd.png', label: 'CI/CD' },
+    { src: 'assets/img/shell_scripting.png', label: 'Shell Scripting' },
+    { src: 'assets/img/docusaurus.png', label: 'Docusaurus' },
+    { src: 'assets/img/yaml.png', label: 'YAML' },
+    { src: 'assets/img/devsecops.png', label: 'DevSecOps' },
   ];
 
   learningHover = false;

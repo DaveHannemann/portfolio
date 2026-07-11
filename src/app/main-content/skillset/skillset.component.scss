@@ -33,7 +33,7 @@ h4 {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   width: 409px;
 }
 
@@ -136,14 +136,25 @@ h4 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-left: 4px;
+  padding-left: 3px;
 }
 
 .skill-row:nth-child(3) {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skill-row:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skill-row:nth-child(5) {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .mobile-talk {
@@ -179,6 +190,14 @@ h4 {
   }
 
   .skill-row:nth-child(3) {
+    gap: 35px;
+  }
+
+  .skill-row:nth-child(4) {
+    gap: 35px;
+  }
+
+  .skill-row:nth-child(5) {
     gap: 35px;
   }
 }

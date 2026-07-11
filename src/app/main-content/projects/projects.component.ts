@@ -36,7 +36,8 @@ export class ProjectsComponent {
     { key: 'sharkie', DE: 'Sharkie', EN: 'Sharkie' },
     { key: 'join', DE: 'Join', EN: 'Join' },
     { key: 'pokedex', DE: 'Pokédex', EN: 'Pokédex' },
-    // { key: 'ongoing', DE: 'Aktuelles Projekt', EN: 'Ongoing Project' },
+    { key: 'kanmind', DE: 'KanMind', EN: 'KanMind' },
+    { key: 'quizly', DE: 'Quizly', EN: 'Quizly' },
   ];
 
   selectedProject = this.projects[0].key;

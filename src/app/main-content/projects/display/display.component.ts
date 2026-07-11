@@ -100,20 +100,44 @@ export class DisplayComponent {
         github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
-    // ongoing: {
-    //   headline: { DE: 'Aktuelles Project', EN: 'Ongoing Project' },
-    //   technologie: {
-    //     DE: 'Angular, TypeScript, Firebase',
-    //     EN: 'Angular, TypeScript, Firebase',
-    //   },
-    //   tech: { DE: 'Technologien', EN: 'Technologies' },
-    //   time: { DE: 'Dauer', EN: 'Duration' },
-    //   images: [
-    //     'assets/img/angular_learn.png',
-    //     'assets/img/typescript_learn.png',
-    //     'assets/img/firebase_learn.png',
-    //   ],
-    //   projectPicture: 'assets/img/soon.jpg',
-    // },
+    kanmind: {
+      headline: 'KanMind',
+      technologie: {
+        DE: 'Python, Django, SQLite, Docker',
+        EN: 'Python, Django, SQLite, Docker',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      images: [
+        'assets/img/python.png',
+        'assets/img/django.png',
+        'assets/img/sql.png',
+        'assets/img/docker.png',
+      ],
+      projectPicture: 'assets/img/kanmind.png',
+      links: {
+        live: 'https://kanmind.david-hannemann.de/',
+        github: 'https://github.com/DaveHannemann/KanMind',
+      },
+    },
+    quizly: {
+      headline: 'Quizly',
+      technologie: {
+        DE: 'Python, Django, SQLite',
+        EN: 'Python, Django, SQLite',
+      },
+      tech: { DE: 'Technologien', EN: 'Technologies' },
+      time: { DE: 'Dauer', EN: 'Duration' },
+      images: [
+        'assets/img/python.png',
+        'assets/img/django.png',
+        'assets/img/sql.png',
+      ],
+      projectPicture: 'assets/img/quizly.png',
+      links: {
+        live: 'https://quizly.david-hannemann.de/',
+        github: 'https://github.com/DaveHannemann/Quizly',
+      },
+    },
   };
 }

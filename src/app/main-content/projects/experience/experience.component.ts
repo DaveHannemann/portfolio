@@ -75,5 +75,33 @@ export class ExperienceComponent {
         github: 'https://github.com/DaveHannemann/PokeDex',
       },
     },
+    kanmind: {
+      title: {
+        DE: 'Was ich gelernt habe',
+        EN: 'What I have learned',
+      },
+      text: {
+        DE: 'Als erstes Backend-Projekt brauchte ich etwas Zeit, um mich zu orientieren. Dabei lernte ich, wie man ein vollständiges Backend aufbaut, Datenbanken nutzt und APIs erstellt.',
+        EN: 'As my first backend project, it took me some time to find my footing. Throughout the process, I learned how to build a complete backend, work with databases, and develop APIs.',
+      },
+      links: {
+        live: 'https://david-hannemann.de/KanMind',
+        github: 'https://github.com/DaveHannemann/KanMind',
+      },
+    },
+    quizly: {
+      title: {
+        DE: 'Was ich gelernt habe',
+        EN: 'What I have learned',
+      },
+      text: {
+        DE: 'In diesem Projekt habe ich meine Fähigkeiten im Umgang mit APIs und Datenbanken weiter vertieft. Ich habe gelernt, wie man Quizfragen mit KI generieren lässt und sie in einer Datenbank speichert, um sie dann in der App anzuzeigen.',
+        EN: 'In this project, I further strengthened my skills in working with APIs and databases. I learned how to generate quiz questions using AI and store them in a database so they could be displayed in the app.',
+      },
+      links: {
+        live: 'https://david-hannemann.de/Quizly',
+        github: 'https://github.com/DaveHannemann/Quizly',
+      },
+    },
   };
 }

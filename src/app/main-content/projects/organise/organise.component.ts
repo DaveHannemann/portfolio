@@ -43,5 +43,17 @@ export class OrganiseComponent {
         EN: 'I made a list of what I want to display and how. Then I split it using a Kanban Board into different tasks to build the project step by step. Every function has its own purpose.',
       },
     },
+    kanmind: {
+      text: {
+        DE: 'Ich habe mich erstmal mit der DRF-Dokumentation vertraut gemacht und die benötigten Endpunkte aufgelistet. Dann habe ich das Projekt in verschiedene Aufgaben aufgeteilt, um es Schritt für Schritt zu bauen. Jede Funktion hat ihren eigenen Zweck.',
+        EN: 'I first familiarized myself with the Django REST Framework documentation and listed the required endpoints. Then, I broke the project down into smaller tasks to build it step by step. Each feature was designed with a specific purpose in mind.',
+      },
+    },
+    quizly: {
+      text: {
+        DE: 'Hier habe ich die KI von Anfang an direkt mit einbeziehen dürfen. Dies war eine spannende Erfahrung, da ich die KI direkt in den Entwicklungsprozess einbinden konnte. Das hat mir die Aufgaben und die Strukturierung des Projekts ein wenig erleichtert.',
+        EN: 'Here I was able to include the AI from the beginning. This was a fascinating experience, as I could integrate the AI directly into the development process. This made the tasks and structuring of the project somewhat easier.',
+      },
+    },
   };
 }
